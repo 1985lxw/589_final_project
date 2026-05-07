@@ -2,7 +2,7 @@ from sklearn import datasets
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
 import pandas as pd
-import json
+import numpy as np
 
 def hot_encoder_helper(X):
     cat_cols = X.select_dtypes(include=['object', 'category', 'string']).columns
@@ -30,7 +30,7 @@ def load_parkinsons_dataset():
 def load_rice_dataset():
     df = pd.read_csv("res/rice.csv")
     X = df.iloc[:, :-1]
-    return X, df.iloc[:, -1].values
+    return X, np.where(df.iloc[:, -1].values == "Cammeo", 0, 1)
 
 def load_credit_dataset(hot_encoding=False):
     df = pd.read_csv("res/credit_approval.csv")
