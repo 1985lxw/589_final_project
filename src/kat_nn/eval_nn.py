@@ -4,44 +4,33 @@ from neural_network import *
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 
-def pred(X, Thetas):
+def pred(X, Thetas, activation):
     """Helper function to calculate model predictions."""
-    A, _ = forwardprop(X, Thetas)
+    A, _ = forwardprop(X, Thetas, activation)
     AL = A[-1] 
     return AL.ravel()
 
-def predict(X, Thetas, threshold=0.5):
+def predict(X, Thetas, activation, threshold=0.5):
     """Helper function to determine model classifications."""
-    probs = pred(X, Thetas)
+    probs = pred(X, Thetas, activation)
     return (probs >= threshold).astype(int)
 
-def evaluate_model(X, y, Thetas):
-    """Helper function to calculate accuracy and f1 of the model."""
-    true_pos = 0
-    true_neg = 0
-    false_pos = 0
-    false_neg = 0
+def evaluate_model(X, y, Thetas, activation, threshold=0.5):
+    """Helper function to calculate accuracy and f1-value of model."""
+    y_true = np.asarray(y).ravel().astype(int)
+    y_pred = predict(X, Thetas, activation, threshold=threshold)
 
-    y_true = np.asarray(y).ravel()
-    y_pred = predict(X, Thetas)
+    tp = np.sum((y_true == 1) & (y_pred == 1))
+    tn = np.sum((y_true == 0) & (y_pred == 0))
+    fp = np.sum((y_true == 0) & (y_pred == 1))
+    fn = np.sum((y_true == 1) & (y_pred == 0))
 
-    for i in range(len(y_true)):
-        if y_true[i] == 1:
-            if y_pred[i] == 1:
-                true_pos += 1
-            else:
-                false_neg += 1
-        elif y_true[i] == 0:
-            if y_pred[i] == 0:
-                true_neg +=1 
-            else:
-                false_pos += 1
+    accuracy = (tp + tn) / len(y_true)
 
+    precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
+    recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
+    f1 = (2 * precision * recall) / (precision + recall) if (precision + recall) > 0 else 0.0
 
-    accuracy = (true_pos + true_neg) / (len(y_pred))
-    precision = true_pos / (true_pos + false_pos) 
-    recall = true_pos / (true_pos + false_neg) 
-    f1 = (2 * precision * recall) / (precision + recall) 
     return accuracy, f1
 
 def normalize_train_test(X_train, X_test):
@@ -75,7 +64,7 @@ def make_k_stratified_folds(D, k):
     return folds
 
 
-def stratified_k_fold_validation(D, architectures, lambdas, k, alphas, num_epochs=1000, batch_size=None):
+def stratified_k_fold_validation(D, architectures, lambdas, k, alphas, activation=sigmoid, num_epochs=1000, batch_size=None):
     """Returns the results of running k-fold validation neural network"""
     
     performances = []
@@ -108,6 +97,7 @@ def stratified_k_fold_validation(D, architectures, lambdas, k, alphas, num_epoch
                         X_train,
                         y_train,
                         layer_sizes=layer_sizes,
+                        activation=activation,
                         alpha=alpha,
                         lambda_reg=lambda_reg,
                         num_epochs=num_epochs,
@@ -115,7 +105,7 @@ def stratified_k_fold_validation(D, architectures, lambdas, k, alphas, num_epoch
                         verbose=False
                     )
                     
-                    acc, f1 = evaluate_model(X_test, y_test, Thetas)
+                    acc, f1 = evaluate_model(X_test, y_test, Thetas, activation)
                     fold_accs.append(acc)
                     fold_f1s.append(f1)
 
@@ -138,7 +128,7 @@ def best_configuration(results_df, metric="f1_mean"):
     idx = results_df[metric].idxmax()
     return results_df.loc[idx]
 
-def learning_curve_cost(D, hidden_layers, lambda_reg, alpha, train_sizes, num_epochs=1000, batch_size=None):
+def learning_curve_cost(D, hidden_layers, lambda_reg, alpha, train_sizes, cost_fn=cost, activation=sigmoid, num_epochs=1000, batch_size=None):
     """Returns training sizes and test-set costs."""
     X = D[:, :-1]
     y = D[:, -1]
@@ -169,6 +159,7 @@ def learning_curve_cost(D, hidden_layers, lambda_reg, alpha, train_sizes, num_ep
             X_sub_raw,
             y_sub,
             layer_sizes=layer_sizes,
+            activation=activation,
             alpha=alpha,
             lambda_reg=lambda_reg,
             num_epochs=num_epochs,
@@ -176,11 +167,11 @@ def learning_curve_cost(D, hidden_layers, lambda_reg, alpha, train_sizes, num_ep
             verbose=False
         )
 
-        A, _ = forwardprop(X_test_normalized, Thetas)
+        A, _ = forwardprop(X_test_normalized, Thetas, activation)
         AL = A[-1]
         y_test_2d = y_test.reshape(1, -1)
 
-        J_test = cost(y_test_2d, AL, Thetas)
+        J_test = cost_fn(y_test_2d, AL, Thetas, lambda_reg)
 
         used_sizes.append(n_train)
         test_costs.append(J_test)
@@ -194,4 +185,4 @@ def plot_learning_curve(train_sizes, costs, dataset_name, title="Learning Curve"
     plt.ylabel("Cost J")
     plt.title(title)
     plt.grid(True)
-    plt.savefig("589_final_project/figures/" + dataset_name + "_learning_curve" + ".jpg")
+    plt.savefig("figures/" + dataset_name + "_learning_curve" + ".jpg")
