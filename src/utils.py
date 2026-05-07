@@ -38,23 +38,3 @@ def load_credit_dataset(hot_encoding=False):
     if hot_encoding:
         X = hot_encoder_helper(X)
     return X, df.iloc[:, -1].values
-
-def load_handwriting_dataset():
-    with open('res/table_results.tgn', 'r') as f:
-        data = json.load(f)
-    df = pd.json_normalize(data['rows_views'][0]) 
-    digits = df.load_digits(return_X_y=True)
-    digits_dataset_X = digits[0]
-    digits_dataset_y = digits[1]
-    N = len(digits_dataset_X)
-
-    return digits_dataset_X, digits_dataset_y
-    
-    # Prints the 64 attributes of a random digit, its class,
-    # and then shows the digit on the screen
-    # digit_to_show = np.random.choice(range(N),1)[0]
-    # print("Attributes:", digits_dataset_X[digit_to_show])
-    # print("Class:", digits_dataset_y[digit_to_show])
-    
-    # plt.imshow(np.reshape(digits_dataset_X[digit_to_show], (8,8)))
-    # plt.show()
