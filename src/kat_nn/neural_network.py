@@ -13,23 +13,22 @@ def fmt_matrix(M):
     )
 
 def sigmoid(z):
+    """Sigmoid activation for binary classification."""
     return 1 / (1 + np.exp(-z))
 
 def add_bias(A):
     return np.vstack([np.ones((1, A.shape[1])), A])
 
 def initialize_parameters(layer_sizes):
-    """Returns a list of network weights initialized from a Gaussian distribution with mu=0, sigma^2=1."""
+    """Returns a list of network weights initialized via Xavier Initialization for better convergence."""
     Thetas = []
-
     for in_size, out_size in zip(layer_sizes[:-1], layer_sizes[1:]):
-        # Gaussian distribution initialization
-        Theta = np.random.randn(out_size, in_size + 1)
+        limit = np.sqrt(6 / (in_size + out_size))
+        Theta = np.random.uniform(-limit, limit, (out_size, in_size + 1))
         Thetas.append(Theta)
-
     return Thetas
 
-def forwardprop(X, Thetas):
+def forwardprop(X, Thetas, activation):
     """Returns the activation result of forward propogation."""
     # 1. a^(l=1) = x^(i)
     A = X.T  
@@ -48,7 +47,7 @@ def forwardprop(X, Thetas):
         outs.append(Z)
 
         # 2. a^(l=k) = g(z^(l=k))
-        A = sigmoid(Z)
+        A = activation(Z)
 
         # 3. Adds bias term to a^(l=k)
         A = add_bias(A)
@@ -59,7 +58,7 @@ def forwardprop(X, Thetas):
     outs.append(ZL)
 
     # 5. a^(l=L) = g(z^(l=L))
-    AL = sigmoid(ZL)
+    AL = activation(ZL)
     activations.append(AL)
 
     # Return a^(l=L)
@@ -69,6 +68,10 @@ def cost(Y, AL, Thetas, lambda_reg=0.0):
     """Returns the regularized error/cost of the network."""
     y_flat = np.asarray(Y).ravel()
     n = len(y_flat)
+
+    # Add epsilon to prevent log(0)
+    epsilon = 1e-15
+    AL = np.clip(AL, epsilon, 1 - epsilon)
 
     # Compute J
     J = (1.0 / n) * np.sum(-Y * np.log(AL) - (1.0 - Y) * np.log(1.0 - AL))
@@ -80,7 +83,19 @@ def cost(Y, AL, Thetas, lambda_reg=0.0):
 
     return J + ( lambda_reg/(2.0 *n) * S) 
 
-def backprop(X, Y, Thetas, alpha=1.0, lambda_reg=0.0, verbose=False):
+def categorical_cost(Y, AL, Thetas, lambda_reg=0.0):
+    """Returns the categorical cross-entropy cost of the network."""
+    n = Y.shape[1] 
+
+    epsilon = 1e-15
+    AL = np.clip(AL, epsilon, 1 - epsilon)
+    
+    J = - (1.0 / n) * np.sum(Y * np.log(AL))
+    
+    S = sum(np.sum(T[:, 1:] ** 2) for T in Thetas)
+    return J + (lambda_reg / (2.0 * n) * S)
+
+def backprop(X, Y, Thetas, activation, alpha=1.0, lambda_reg=0.0, verbose=False):
     """Returns the gradients for all layers using full-batch backpropagation."""
     n = X.shape[0]
     L = len(Thetas)
@@ -92,7 +107,7 @@ def backprop(X, Y, Thetas, alpha=1.0, lambda_reg=0.0, verbose=False):
             y = Y[i:i+1].T
 
             # 1.1 Propagate x^(i) and compute each of the network's outputs, f_theta(x^(i))
-            activations, outs = forwardprop(x, Thetas)
+            activations, outs = forwardprop(x, Thetas, activation)
 
             # 1.2 Compute the delta values of all output neurons
             delta = [None] * L
@@ -138,7 +153,7 @@ def backprop(X, Y, Thetas, alpha=1.0, lambda_reg=0.0, verbose=False):
         Y = Y.reshape(1, -1)
 
         # 1.1 Propagate x^(i) and compute each of the network's outputs, f_theta(x^(i))
-        activations, outs = forwardprop(X, Thetas)
+        activations, outs = forwardprop(X, Thetas, activation)
 
         # 1.2 Compute the delta values of all output neurons
         delta = [None] * L
@@ -183,7 +198,7 @@ def make_mini_batches(X, Y, batch_size):
         batches.append((X[start:end], Y[start:end]))
     return batches
 
-def nn(X, Y, layer_sizes, alpha=1.0, lambda_reg=0.0, num_epochs=1000, batch_size=None, verbose=False):
+def nn(X, Y, layer_sizes, activation, alpha=1.0, lambda_reg=0.0, num_epochs=1000, batch_size=None, verbose=False):
     """Returns the result of training a neural network."""
     Thetas = initialize_parameters(layer_sizes)
     costs = []
@@ -253,7 +268,7 @@ def nn(X, Y, layer_sizes, alpha=1.0, lambda_reg=0.0, num_epochs=1000, batch_size
                     print(f"\tProcessing training instance {i+1}")
                     print(f"\tForward propagating the input {fmt(x.ravel())}")
 
-                    activations, outs = forwardprop(x, Thetas)
+                    activations, outs = forwardprop(x, Thetas, activation)
 
                     print(f"\t\ta1: {fmt(activations[0].ravel())}")
                     for l in range(len(outs)):
@@ -267,13 +282,13 @@ def nn(X, Y, layer_sizes, alpha=1.0, lambda_reg=0.0, num_epochs=1000, batch_size
                     J_inst = (-y * np.log(AL) - (1 - y) * np.log(1 - AL))
                     print(f"\tCost, J, associated with instance {i+1}: {np.sum(J_inst):.3f}\n")
 
-            Ab, _ = forwardprop(Xb, Thetas)
+            Ab, _ = forwardprop(Xb, Thetas, activation)
 
             if verbose:
                 full_J = cost(Yb, Ab[-1], Thetas, lambda_reg)
                 print(f"Final (regularized) cost, J, based on the complete training set: {full_J:.5f}")
 
-            Thetas = backprop(Xb, Yb, Thetas, alpha, lambda_reg, verbose)
+            Thetas = backprop(Xb, Yb, Thetas, activation, alpha, lambda_reg, verbose)
 
             batch_cost = cost(Yb, Ab[-1], Thetas, lambda_reg)
             epoch_cost += batch_cost * Xb.shape[0]
