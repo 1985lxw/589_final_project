@@ -39,9 +39,9 @@ def evaluate_model(X, y, Thetas):
 
 
     accuracy = (true_pos + true_neg) / (len(y_pred))
-    precision = true_pos / (true_pos + false_pos)
-    recall = true_pos / (true_pos + false_neg)
-    f1 = (2 * precision * recall) / (precision + recall)
+    precision = true_pos / (true_pos + false_pos) 
+    recall = true_pos / (true_pos + false_neg) 
+    f1 = (2 * precision * recall) / (precision + recall) 
     return accuracy, f1
 
 def normalize_train_test(X_train, X_test):
@@ -194,4 +194,4 @@ def plot_learning_curve(train_sizes, costs, dataset_name, title="Learning Curve"
     plt.ylabel("Cost J")
     plt.title(title)
     plt.grid(True)
-    plt.savefig("figures/" + dataset_name + "_learning_curve" + ".jpg")
+    plt.savefig("589_final_project/figures/" + dataset_name + "_learning_curve" + ".jpg")
