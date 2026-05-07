@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import json
 
+
 def load_digits_dataset():
     """Helper function to load digits dataset, excerpt from project specifications."""
     digits = datasets.load_digits(return_X_y=True)
