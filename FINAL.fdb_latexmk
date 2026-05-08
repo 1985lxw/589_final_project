@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1778260974.94134 "c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex" "FINAL.pdf" "FINAL" 1778260978.18734 0
-  "FINAL.aux" 1778260977 2781 aa53bd8e7d80b828ae2fce7693241f7b "pdflatex"
-  "FINAL.out" 1778260977 2776 247c872deead2f53805f3c780a1361a6 "pdflatex"
-  "FINAL.tex" 1778260973 11519 48c104c872b052847a4efba17f25d7b4 ""
-  "c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex" 1778260973 11519 48c104c872b052847a4efba17f25d7b4 ""
+["pdflatex"] 1778271835.93493 "c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex" "FINAL.pdf" "FINAL" 1778271839.55514 0
+  "FINAL.aux" 1778271839 3842 09e0382acfe9afd05fa5a206d88a7377 "pdflatex"
+  "FINAL.out" 1778271839 2980 6426351cf288b9d9028d48b46de6909d "pdflatex"
+  "FINAL.tex" 1778271830 18828 09ab9fa6daec4edd82890d551a028826 ""
+  "c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex" 1778271830 18828 09ab9fa6daec4edd82890d551a028826 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1771358355 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1771357163 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1771359225 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -235,7 +235,13 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1771373854 5587484 49bd08ff372a6985d7d70778694ddaac ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1771374349 3636150 9b239b8a39e354371e94664c309b1bbb ""
   "c:/texlive/2025/texmf.cnf" 1771373817 713 e69b156964470283e0530f5060668171 ""
-  "figures/rice_accuracy_dt.png" 1778259468 16555 e457a19609b28af157ea2e4ef4dc2eee ""
+  "figures/credit_acc_dt.png" 1778269947 15934 879b8c165f8af8272d3f4ee89ed227ed ""
+  "figures/credit_f1_dt.png" 1778269956 15464 62c4584ccaa687bcb5e939a88db0738c ""
+  "figures/digit_acc_dt.png" 1778271422 15942 ca6c0919851b5c4cd244d0681d1cb7c3 ""
+  "figures/digit_f1_dt.png" 1778271430 16338 ebe427b756914464630e0ec27ecc3139 ""
+  "figures/park_acc_dt.png" 1778270711 15909 f3168daacadbdd39566b03012550b37f ""
+  "figures/park_f1_dt.png" 1778270730 17129 40a1a5cbf90e8966e750c033dac02cce ""
+  "figures/rice_acc_dt.png" 1778259468 16555 e457a19609b28af157ea2e4ef4dc2eee ""
   "figures/rice_f1_dt.png" 1778259477 15202 50fb5edec4c86708129dd9c82fe0c3bf ""
   (generated)
   "FINAL.aux"
