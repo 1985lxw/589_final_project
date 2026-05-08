@@ -138,7 +138,7 @@
     \noindent\rule{\linewidth}{0.5pt}
     \vspace{0.025cm}
     \item \textbf{Katherine} implemented TODO
-    \item \textbf{Tiffany} implemented TODO
+    \item \textbf{Tiffany} implemented KNN and Random Forest. She evaluated the hyperparameters k for kNN and ntree for random forest.
     \item \textbf{Xing-Wei} implemented Decision Trees
 \end{itemize}
 
@@ -163,71 +163,64 @@ TODO
 
 \noindent\rule{\textwidth}{0.5pt}
 
-\subsection{Algorithm 2}
-
-TODO 
-
-\noindent\rule{\textwidth}{0.5pt}
-
-\subsection{Decision Trees Algorithm}
-
-\begin{verbatim}
-Tuning for dataset with 1797 rows and 64 features.
-Testing Depths: [7, 9, 11, 13]
-Testing Splits: [17, 53, 89, 179]
-
-Depth    | Split    | Test Acc   | Test F1   
----------------------------------------------
-7        | 17       | 0.8136     | 0.8124
-7        | 53       | 0.7561     | 0.7568
-7        | 89       | 0.7062     | 0.7043
-7        | 179      | 0.6328     | 0.6165
-9        | 17       | 0.8319     | 0.8311
-9        | 53       | 0.7612     | 0.7592
-9        | 89       | 0.7067     | 0.7013
-9        | 179      | 0.6505     | 0.6360
-11       | 17       | 0.8219     | 0.8222
-11       | 53       | 0.7626     | 0.7615
-11       | 89       | 0.7204     | 0.7171
-11       | 179      | 0.6321     | 0.6216
-13       | 17       | 0.8141     | 0.8119
-13       | 53       | 0.7568     | 0.7568
-13       | 89       | 0.7039     | 0.7037
-13       | 179      | 0.6383     | 0.6217
-
-==============================
-BEST CONFIGURATION:
-Max Depth: 9
-Min Split: 17
-F1 Score:  0.8311
-==============================
-
-
-Final Results:
-Training Accuracy: 0.8936
-Training F1 Score: 0.8935
-Testing Accuracy: 0.8344
-Testing F1 Score: 0.8327
-\end{verbatim}
-
-
+\subsection{KNN}
+\begin{tabular}{|c|c|c|c|}
+\hline
+k & Accuracy & F1 Score \\
+\hline
+1	& 0.988571	& 0.989391 \\
+3	& 0.986857	& 0.987597 \\
+5	& 0.986286	& 0.987128 \\
+7	& 0.986286	& 0.987206 \\
+9	& 0.982857	& 0.984203 \\
+11	& 0.980571	& 0.982039 \\
+13	& 0.980000	& 0.980917 \\
+15	& 0.980571	& 0.982108 \\
+17	& 0.977143	& 0.978787 \\
+19	& 0.976000	& 0.977379 \\
+21	& 0.974857	& 0.976219 \\
+23	& 0.972571	& 0.974215 \\
+25	& 0.969714	& 0.971757 \\ 
+27	& 0.966286	& 0.968297 \\
+29	& 0.968571	& 0.970363 \\
+31	& 0.967429	& 0.968898 \\
+33	& 0.961714	& 0.963689 \\
+35	& 0.964571	& 0.966932 \\
+37	& 0.963429	& 0.965532 \\
+39	& 0.963429	& 0.965328 \\
+41	& 0.960571	& 0.962805 \\
+43	& 0.961143	& 0.962758 \\
+45	& 0.959429	& 0.961605 \\
+47	& 0.956571	& 0.959014 \\
+49	& 0.957714	& 0.960383 \\
+51	& 0.955429	& 0.958529 \\
+\end{tabular}
 \begin{figure}[htbp]
-    \centering
-    % First Image
-    \begin{minipage}{0.48\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/digit_acc_dt.png}
+    \begin{minipage}{0.65\textwidth}
+        \includegraphics[width=\linewidth]{knn_figures/digits_knn.png}
         \caption{Handwritten Digits Accuracy Distribution}
-    \end{minipage}\hfill % This adds horizontal space between the two
-    % Second Image
-    \begin{minipage}{0.48\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/digit_f1_dt.png}
-        \caption{Handwritten Digits F1 Score Distribution}
     \end{minipage}
 \end{figure}
+\noindent\rule{\textwidth}{0.5pt}
 
-Analysis about graph
+\subsection{Random Forest}
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+ntree & 1 & 5 & 10 & 20 & 30 & 40 & 50 \\
+\hline
+Accuracy & 0.968223 & 0.969386 & 0.993427 & 1.0 & 0.996774 & 0.997059 & 1.0 \\
+Precision & 0.954737 & 1.000000 & 1.000000 & 1.0 & 1.000000 & 1.000000 & 1.0 \\
+Recall & 0.980000 & 0.934332 & 0.985000 & 1.0 & 0.993333 & 0.994118 & 1.0 \\
+F1 Score & 0.962738 & 0.965294 & 0.992204 & 1.0 & 0.996552 & 0.996970 & 1.0
+\end{tabular}
+
+\begin{figure}[htbp]
+    \begin{minipage}{0.65\textwidth}
+        \includegraphics[width=\linewidth]{rf_figures/Digits_all.png}
+        \caption{Digits Accuracy and F1 Score Distribution}
+    \end{minipage}
+\end{figure}
 
 \newpage 
 
@@ -242,79 +235,65 @@ TODO
 
 \noindent\rule{\textwidth}{0.5pt}
 
-\subsection{Algorithm 2}
+\subsection{KNN}
 
-TODO 
+\begin{tabular}
+{|c|c|c|c|}
+\hline
+k & Accuracy & F1 Score \\
+\hline
+1	& 0.966667	& 0.978033 \\
+3	& 0.944444	& 0.963738 \\
+5	& 0.944444	& 0.964514 \\
+7	& 0.944444	& 0.965475 \\
+9	& 0.927778	& 0.954590 \\
+11	& 0.900000	& 0.937926 \\
+13	& 0.872222	& 0.922714 \\
+15	& 0.861111	& 0.915862 \\
+17	& 0.850000	& 0.910674 \\
+19	& 0.838889	& 0.903946 \\
+21	& 0.811111	& 0.890880 \\
+23	& 0.827778	& 0.899946 \\
+25	& 0.850000	& 0.912620 \\
+27	& 0.838889	& 0.906579 \\
+29	& 0.838889	& 0.906613 \\
+31	& 0.844444	& 0.909247 \\
+33	& 0.866667	& 0.922270 \\
+35	& 0.872222	& 0.924905 \\
+37	& 0.872222	& 0.924716 \\
+39	& 0.850000	& 0.912842 \\
+41	& 0.855556	& 0.915269 \\
+43	& 0.833333	& 0.903978 \\
+45	& 0.844444	& 0.909831 \\
+47	& 0.822222	& 0.897769 \\
+49	& 0.827778	& 0.900780 \\
+51	& 0.816667	& 0.895134 \\
+\end{tabular}
+
+\begin{figure}[htbp]
+    \begin{minipage}{0.65\textwidth}
+        \includegraphics[width=\linewidth]{knn_figures/parkinsons_knn.png}
+        \caption{Handwritten Digits Accuracy Distribution}
+    \end{minipage}
+\end{figure}
+\noindent\rule{\textwidth}{0.5pt}
 
 \noindent\rule{\textwidth}{0.5pt}
 
-\subsection{Decision Trees Algorithm}
-
-\begin{verbatim}
-Tuning for dataset with 195 rows and 22 features.
-Testing Depths: [2, 3, 5, 7, 9, 11, 13]
-Testing Splits: [9, 19, 29, 39]
-
-Depth    | Split    | Test Acc   | Test F1   
----------------------------------------------
-2        | 9        | 0.8503     | 0.8065
-2        | 19       | 0.8117     | 0.7631
-2        | 29       | 0.8454     | 0.7922
-2        | 39       | 0.8625     | 0.7836
-3        | 9        | 0.8681     | 0.8278
-3        | 19       | 0.8312     | 0.7890
-3        | 29       | 0.8309     | 0.7553
-3        | 39       | 0.8620     | 0.7975
-5        | 9        | 0.8575     | 0.8157
-5        | 19       | 0.8556     | 0.8171
-5        | 29       | 0.8362     | 0.7784
-5        | 39       | 0.8611     | 0.7906
-7        | 9        | 0.8456     | 0.8050
-7        | 19       | 0.8211     | 0.7456
-7        | 29       | 0.8312     | 0.7815
-7        | 39       | 0.8617     | 0.7912
-9        | 9        | 0.8323     | 0.7762
-9        | 19       | 0.8515     | 0.8086
-9        | 29       | 0.8534     | 0.8038
-9        | 39       | 0.8512     | 0.7767
-11       | 9        | 0.8562     | 0.7975
-11       | 19       | 0.8220     | 0.7627
-11       | 29       | 0.8273     | 0.7595
-11       | 39       | 0.8606     | 0.7840
-13       | 9        | 0.8628     | 0.8177
-13       | 19       | 0.8361     | 0.7720
-13       | 29       | 0.8348     | 0.7692
-13       | 39       | 0.8495     | 0.7635
-
-==============================
-BEST CONFIGURATION:
-Max Depth: 3
-Min Split: 9
-F1 Score:  0.8278
-==============================
-
-
-Final Results:
-Training Accuracy: 0.9345
-Training F1 Score: 0.9165
-Testing Accuracy: 0.8508
-Testing F1 Score: 0.8101
-\end{verbatim}
-
-
+\subsection{Random Forest}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+ntree & 1 & 5 & 10 & 20 & 30 & 40 & 50 \\
+\hline
+Accuracy & 0.805556 & 0.794444 & 0.816667 & 0.833333 & 0.850000	& 0.838889	& 0.850000 \\
+Precision & 0.836293 & 0.843709	& 0.853481 & 0.853754 & 0.861730 & 0.854793	& 0.872728 \\
+Recall & 0.935714 & 0.907143 & 0.928571	& 0.950000	& 0.964286	& 0.957143 & 0.950000 \\
+F1 Score & 0.881610	& 0.872319	& 0.887543 & 0.898543 & 0.909364 & 0.902490	& 0.908122
+\end{tabular}
 \begin{figure}[htbp]
-    \centering
-    % First Image
-    \begin{minipage}{0.48\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/park_acc_dt.png}
-        \caption{Oxford Parkinson's Disease Detection Accuracy Distribution}
-    \end{minipage}\hfill % This adds horizontal space between the two
-    % Second Image
-    \begin{minipage}{0.48\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{figures/park_f1_dt.png}
-        \caption{Oxford Parkinson's Disease Detection F1 Score Distribution}
+    \begin{minipage}{0.65\textwidth}
+        \includegraphics[width=\linewidth]{rf_figures/Parkinsons_all.png}
+        \caption{Parkinsons Accuracy and F1 Score Distribution}
     \end{minipage}
 \end{figure}
 
@@ -330,9 +309,47 @@ TODO
 
 \noindent\rule{\textwidth}{0.5pt}
 
-\subsection{Algorithm 2}
+\subsection{KNN}
 
-TODO 
+\begin{tabular}
+{|c|c|c|c|}
+\hline
+k & Accuracy & F1 Score \\
+\hline
+1 & 0.886614 & 0.867819 \\
+3 & 0.909974 & 0.894640 \\
+5 & 0.918898 & 0.904873 \\
+7 & 0.923885 & 0.910538 \\
+9 & 0.922047 & 0.908377 \\
+11 & 0.922835 & 0.909521 \\ 
+13 & 0.924409 & 0.911221 \\
+15 & 0.925984 & 0.913105 \\
+17 & 0.925984 & 0.912772 \\
+19 & 0.927034 & 0.914136 \\
+21 & 0.926509 & 0.913226 \\
+23 & 0.927034 & 0.914092 \\
+25 & 0.928084 & 0.915473 \\
+27 & 0.925984 & 0.912969 \\
+29 & 0.925459 & 0.912357 \\
+31 & 0.928346 & 0.915703 \\
+33 & 0.926509 & 0.913735 \\
+35 & 0.925984 & 0.912977 \\
+37 & 0.926509 & 0.913497 \\
+39 & 0.927559 & 0.915076 \\
+41 & 0.927034 & 0.914137 \\
+43 & 0.927559 & 0.914960 \\
+45 & 0.924934 & 0.911821 \\
+47 & 0.927559 & 0.914945 \\
+49 & 0.927559 & 0.914773 \\
+51 & 0.928084 & 0.915623 
+\end{tabular}
+
+\begin{figure}[htbp]
+    \begin{minipage}{0.65\textwidth}
+        \includegraphics[width=\linewidth]{knn_figures/rice_knn.png}
+        \caption{Rice Accuracy and F1 Score Distribution}
+    \end{minipage}
+\end{figure}
 
 \noindent\rule{\textwidth}{0.5pt}
 
@@ -429,9 +446,47 @@ TODO
 
 \noindent\rule{\textwidth}{0.5pt}
 
-\subsection{Algorithm 2}
+\subsection{KNN}
 
-TODO 
+\begin{tabular}
+{|c|c|c|c|}
+\hline
+k & Accuracy & F1 Score \\
+\hline
+1 & 0.806250 & 0.780158 \\
+3 & 0.859375 & 0.845093 \\
+5 & 0.864062 & 0.853219 \\
+7 & 0.873437 & 0.864596 \\
+9 & 0.862500 & 0.854968 \\
+11 & 0.865625 & 0.858536 \\
+13 & 0.856250 & 0.848834 \\
+15 & 0.860938 & 0.854310 \\
+17 & 0.862500 & 0.858192 \\
+19 & 0.864062 & 0.860247 \\
+21 & 0.865625 & 0.860856 \\
+23 & 0.857812 & 0.853120 \\
+25 & 0.864062 & 0.858874 \\
+27 & 0.867188 & 0.863106 \\
+29 & 0.857812 & 0.854402 \\
+31 & 0.860938 & 0.856263 \\
+33 & 0.868750 & 0.865578 \\
+35 & 0.857812 & 0.852417 \\
+37 & 0.862500 & 0.857252 \\
+39 & 0.864062 & 0.856573 \\
+41 & 0.860938 & 0.853287 \\
+43 & 0.856250 & 0.848844 \\
+45 & 0.862500 & 0.855567 \\
+47 & 0.860938 & 0.854175 \\
+49 & 0.864062 & 0.856989 \\
+51 & 0.856250 & 0.849728 \\
+\end{tabular}
+
+\begin{figure}[htbp]
+    \begin{minipage}{0.65\textwidth}
+        \includegraphics[width=\linewidth]{knn_figures/credit_knn.png}
+        \caption{Credit Approval Accuracy and F1 Score Distribution}
+    \end{minipage}
+\end{figure}
 
 \noindent\rule{\textwidth}{0.5pt}
 
