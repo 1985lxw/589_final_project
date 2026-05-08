@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1778181062.04198 "c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex" "FINAL.pdf" "FINAL" 1778181068.32189 0
-  "FINAL.aux" 1778181067 868 82e027c585668a6037f46cff63ad9cb1 "pdflatex"
-  "FINAL.out" 1778181067 799 0c4c61a767978656c4f7d1971b63dbd2 "pdflatex"
-  "FINAL.tex" 1778181059 7619 220479e9b913df9ec5966e77e512235e ""
-  "c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex" 1778181059 7619 220479e9b913df9ec5966e77e512235e ""
+["pdflatex"] 1778203503.88249 "c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex" "FINAL.pdf" "FINAL" 1778203512.04258 0
+  "FINAL.aux" 1778203511 2781 aa53bd8e7d80b828ae2fce7693241f7b "pdflatex"
+  "FINAL.out" 1778203511 2776 247c872deead2f53805f3c780a1361a6 "pdflatex"
+  "FINAL.tex" 1778203503 10814 559bcdcda1e46d133738dc759221db1c ""
+  "c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex" 1778203503 10814 559bcdcda1e46d133738dc759221db1c ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1771358355 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1771357163 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1771359225 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -235,6 +235,8 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1771373854 5587484 49bd08ff372a6985d7d70778694ddaac ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1771374349 3636150 9b239b8a39e354371e94664c309b1bbb ""
   "c:/texlive/2025/texmf.cnf" 1771373817 713 e69b156964470283e0530f5060668171 ""
+  "figures/rice_accuracy_dt.png" 1778202829 17254 d20d2b478ca630abf8c3ef789ac481df ""
+  "figures/rice_f1_dt.png" 1778202871 17468 26a3df9f9395e69918e8393b88442293 ""
   (generated)
   "FINAL.aux"
   "FINAL.log"

@@ -414,6 +414,16 @@ INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1440.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT ./figures/rice_accuracy_dt.png
+INPUT ./figures/rice_accuracy_dt.png
+INPUT ./figures/rice_accuracy_dt.png
+INPUT ./figures/rice_accuracy_dt.png
+INPUT ./figures/rice_accuracy_dt.png
+INPUT ./figures/rice_f1_dt.png
+INPUT ./figures/rice_f1_dt.png
+INPUT ./figures/rice_f1_dt.png
+INPUT ./figures/rice_f1_dt.png
+INPUT ./figures/rice_f1_dt.png
 INPUT FINAL.aux
 INPUT ./FINAL.out
 INPUT ./FINAL.out

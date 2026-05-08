@@ -173,6 +173,149 @@ TODO
 
 TODO 
 
+
+
+
+\newpage 
+
+
+
+
+\section{\underline{The Oxford Parkinson's Disease Detection Dataset}}
+
+\subsection{Neural Networks Algorithm}
+
+TODO
+
+\noindent\rule{\textwidth}{0.5pt}
+
+\subsection{Algorithm 2}
+
+TODO 
+
+\noindent\rule{\textwidth}{0.5pt}
+
+\subsection{Algorithm 3}
+
+TODO 
+
+
+
+
+\newpage
+
+
+
+
+\section{\underline{The Rice Grain Dataset}}
+\subsection{Neural Networks Algorithm}
+
+TODO
+
+\noindent\rule{\textwidth}{0.5pt}
+
+\subsection{Algorithm 2}
+
+TODO 
+
+\noindent\rule{\textwidth}{0.5pt}
+
+\subsection{Decision Trees Algorithm}
+We chose to test decision trees on the rice dataset 
+because it has a moderate number of features (7) and a 
+relatively large number of samples (3810), which allows 
+us to explore how different tree depths and minimum split 
+sizes affect performance.\newline
+
+\begin{verbatim}
+Tuning for dataset with 3810 rows and 7 features.
+Testing Depths: [2, 3, 5, 7, 9, 11]
+Testing Splits: [190, 381, 571, 762]
+
+Depth    | Split    | Test Acc   | Test F1   
+---------------------------------------------
+2        | 190      | 0.9215     | 0.9192
+2        | 381      | 0.9228     | 0.9205
+2        | 571      | 0.9226     | 0.9202
+2        | 762      | 0.9239     | 0.9215
+3        | 190      | 0.9234     | 0.9210
+3        | 381      | 0.9213     | 0.9189
+3        | 571      | 0.9202     | 0.9179
+3        | 762      | 0.9239     | 0.9215
+5        | 190      | 0.9213     | 0.9189
+5        | 381      | 0.9234     | 0.9210
+5        | 571      | 0.9226     | 0.9202
+5        | 762      | 0.9239     | 0.9215
+7        | 190      | 0.9223     | 0.9199
+7        | 381      | 0.9226     | 0.9203
+7        | 571      | 0.9215     | 0.9192
+7        | 762      | 0.9239     | 0.9215
+9        | 190      | 0.9234     | 0.9210
+9        | 381      | 0.9220     | 0.9197
+9        | 571      | 0.9239     | 0.9215
+9        | 762      | 0.9239     | 0.9215
+11       | 190      | 0.9223     | 0.9199
+11       | 381      | 0.9220     | 0.9197
+11       | 571      | 0.9218     | 0.9194
+11       | 762      | 0.9239     | 0.9215
+
+==============================
+BEST CONFIGURATION:
+Max Depth: 11
+Min Split: 762
+F1 Score:  0.9215
+==============================
+
+
+
+Final Results:
+Training Accuracy: 0.9278
+Training F1 Score: 0.9264
+Testing Accuracy: 0.9244
+Testing F1 Score: 0.9229
+\end{verbatim}
+
+\begin{figure}[htbp]
+    \centering
+    % First Image
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/rice_accuracy_dt.png}
+        \caption{Rice Accuracy Distribution}
+    \end{minipage}\hfill % This adds horizontal space between the two
+    % Second Image
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/rice_f1_dt.png}
+        \caption{Rice F1 Score Distribution}
+    \end{minipage}
+\end{figure}
+
+\newpage
+
+
+
+
+\section{\underline{The Credit Approval Dataset}}
+\subsection{Neural Networks Algorithm}
+
+TODO
+
+\noindent\rule{\textwidth}{0.5pt}
+
+\subsection{Algorithm 2}
+
+TODO 
+
+\noindent\rule{\textwidth}{0.5pt}
+
+\subsection{Algorithm 3}
+
+TODO 
+
+
+
+
 %-------- Extra Credit Questions --------------------------
 \newpage
 \noindent \textcolor{purple}{\textbf{\Large{Extra Credit}}}

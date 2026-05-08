@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.2.17)  7 MAY 2026 15:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.2.17)  7 MAY 2026 21:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1066,27 +1066,118 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 159.
 
-[2] [3] (./FINAL.aux)
+[2]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 184.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@underline' on input line 184.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 184.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 184.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 184.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 184.
+
+[3]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 210.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@underline' on input line 210.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 210.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 210.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 210.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 210.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--229
+
+ []
+
+[4]
+<figures/rice_accuracy_dt.png, id=137, 416.2752pt x 328.8285pt>
+File: figures/rice_accuracy_dt.png Graphic file (type png)
+<use figures/rice_accuracy_dt.png>
+Package pdftex.def Info: figures/rice_accuracy_dt.png  used on input line 283.
+(pdftex.def)             Requested size: 234.76738pt x 185.45227pt.
+<figures/rice_f1_dt.png, id=139, 416.2752pt x 328.8285pt>
+File: figures/rice_f1_dt.png Graphic file (type png)
+<use figures/rice_f1_dt.png>
+Package pdftex.def Info: figures/rice_f1_dt.png  used on input line 289.
+(pdftex.def)             Requested size: 234.76738pt x 185.45227pt.
+ [5 <./figures/rice_accuracy_dt.png> <./figures/rice_f1_dt.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 299.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@underline' on input line 299.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 299.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 299.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 299.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 299.
+
+[6] [7] (./FINAL.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `FINAL.out' has not changed.
-(rerunfilecheck)             Checksum: 0C4C61A767978656C4F7D1971B63DBD2;799.
+(rerunfilecheck)             Checksum: 247C872DEEAD2F53805F3C780A1361A6;2776.
  ) 
 Here is how much of TeX's memory you used:
- 36177 strings out of 467533
- 707079 string characters out of 5423662
- 1270200 words of memory out of 5000000
- 64433 multiletter control sequences out of 15000+600000
+ 36232 strings out of 467533
+ 708181 string characters out of 5423662
+ 1281200 words of memory out of 5000000
+ 64471 multiletter control sequences out of 15000+600000
  637173 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,5n,108p,1052b,488s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,8n,108p,1052b,739s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on FINAL.pdf (3 pages, 99633 bytes).
+Output written on FINAL.pdf (7 pages, 140260 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
- 29381 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 198 PDF objects out of 1000 (max. 8388607)
+ 145 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 29487 words of extra memory for PDF output out of 29859 (max. 10000000)
 
