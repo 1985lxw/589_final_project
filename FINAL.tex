@@ -225,7 +225,7 @@ We chose to test decision trees on the rice dataset
 because it has a moderate number of features (7) and a 
 relatively large number of samples (3810), which allows 
 us to explore how different tree depths and minimum split 
-sizes affect performance.\newline
+sizes affect performance.
 
 \begin{verbatim}
 Tuning for dataset with 3810 rows and 7 features.
@@ -269,10 +269,10 @@ F1 Score:  0.9215
 
 
 Final Results:
-Training Accuracy: 0.9278
-Training F1 Score: 0.9264
-Testing Accuracy: 0.9244
-Testing F1 Score: 0.9229
+Training Accuracy: 0.9239
+Training F1 Score: 0.9216
+Testing Accuracy: 0.9239
+Testing F1 Score: 0.9215
 \end{verbatim}
 
 \begin{figure}[htbp]
@@ -290,6 +290,16 @@ Testing F1 Score: 0.9229
         \caption{Rice F1 Score Distribution}
     \end{minipage}
 \end{figure}
+
+For both models, the training scores are highly concentrated around 0.92, 
+while the testing scores are more spread out, with a mean around 0.923 for 
+accuracy and 0.922 for F1 score. The training performance suggests that 
+the models have high stability and low bias, however, the testing performance 
+indicates that there may be some sensitivity to the specific training data used in each fold.
+Since the mean training scores are very close to the mean testing scores, it suggests 
+that the models are robust and are not overfitting.
+Decision trees can easily split numerical features to find precise boundaries, 
+so they are well-suited for the rice dataset, which consists of numerical attributes.
 
 \newpage
 
