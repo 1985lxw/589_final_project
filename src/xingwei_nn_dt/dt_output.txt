@@ -1,0 +1,32 @@
+Rice Grain Final Results:
+Max Depth: 11
+Min Split: 762
+Training Accuracy: 0.9239
+Training F1 Score: 0.9216
+Testing Accuracy: 0.9239
+Testing F1 Score: 0.9215
+
+Credit Approval Final Results:
+Max Depth: 12
+Min Split: 97
+Training Accuracy: 0.8746
+Training F1 Score: 0.8741
+Testing Accuracy: 0.8606
+Testing F1 Score: 0.8601
+
+Parkinsons Final Results:
+Max Depth: 3
+Min Split: 9
+Training Accuracy: 0.9345
+Training F1 Score: 0.9165
+Testing Accuracy: 0.8508
+Testing F1 Score: 0.8101
+
+
+Handwritten Digits Final Results:
+Max Depth: 9
+Min Split: 17
+Training Accuracy: 0.8936
+Training F1 Score: 0.8935
+Testing Accuracy: 0.8344
+Testing F1 Score: 0.8327
