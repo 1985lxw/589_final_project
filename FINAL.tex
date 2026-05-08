@@ -203,6 +203,7 @@ k & Accuracy & F1 Score \\
 \end{figure}
 \noindent\rule{\textwidth}{0.5pt}
 
+As k increases, the general trend for the performance is that it decreases. This is expected, as too large k values can lead to too generalized performance. Although, the overall performance is still generally high with the lowest accuracy and F1 score being around 0.96. The best configuration for this model based on this graph is at $k=1$. 
 \subsection{Random Forest}
 
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
@@ -222,6 +223,7 @@ F1 Score & 0.962738 & 0.965294 & 0.992204 & 1.0 & 0.996552 & 0.996970 & 1.0
     \end{minipage}
 \end{figure}
 
+Technically the highest accuracy and f1 occurs at ntree=20 and ntree=50 because the accuracy and f1 are both 1 with those values, but it is likely that the model is overfit. Becuase of this, it may be better to use a value of ntree=5 even though the performance is technically a little lower at an accuracy of 0.969386 and an f1 score of 0.965294.
 \newpage 
 
 
@@ -562,8 +564,8 @@ Testing F1 Score: 0.8601
                     & \multicolumn{2}{c|}{Handwritten Digits}  & \multicolumn{2}{c|}{Parkinson's}         & \multicolumn{2}{c|}{Rice Grains}         & \multicolumn{2}{c|}{Credit Approval}     \\ \hline
                     & \multicolumn{1}{c|}{Accuracy} & F1-Score & \multicolumn{1}{c|}{Accuracy} & F1-Score & \multicolumn{1}{c|}{Accuracy} & F1-Score & \multicolumn{1}{c|}{Accuracy} & F1-Score \\ \hline
 Neural Networks     & \multicolumn{1}{c|}{}         &          & \multicolumn{1}{c|}{}         &          & \multicolumn{1}{c|}{}         &          & \multicolumn{1}{c|}{}         &          \\ \hline
-K-Nearest Neighbors & \multicolumn{1}{c|}{}         &          & \multicolumn{1}{c|}{}         &          & \multicolumn{1}{c|}{}         &          & \multicolumn{1}{c|}{}         &          \\ \hline
-Decision Trees      & \multicolumn{1}{c|}{0.8344}   & 0.8327   & \multicolumn{1}{c|}{0.8508}   & 0.8101   & \multicolumn{1}{c|}{0.9239}   & 0.9215   & \multicolumn{1}{c|}{0.8606}   & 0.8601   \\ \hline
+K-Nearest Neighbors & \multicolumn{1}{c|}{0.97109}         & 0.97281          & \multicolumn{1}{c|}{0.866239}     &   0.92118       & \multicolumn{1}{c|}{0.9237}         &  0.91048        & \multicolumn{1}{c|}{0.86009}  & 0.85289    \\ \hline
+Decision Trees/Random Forest & \multicolumn{1}{c|}{0.989267}   & {0.98767}   & \multicolumn{1}{c|}{0.82698} & 0.75305   & \multicolumn{1}{c|}{0.9239}   & 0.9215   & \multicolumn{1}{c|}{0.8606}   & 0.8601   \\ \hline
 \end{tabular}
 \end{table}
 
