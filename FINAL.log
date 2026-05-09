@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.2.17)  8 MAY 2026 21:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.2.17)  8 MAY 2026 21:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1082,132 +1082,137 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 163.
 
 
-Overfull \hbox (30.32031pt too wide) in alignment at lines 174--178
+Overfull \hbox (30.32031pt too wide) in alignment at lines 172--176
  [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (30.32031pt too wide) in alignment at lines 178--183
+Overfull \hbox (30.32031pt too wide) in alignment at lines 176--181
  [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (30.32031pt too wide) in alignment at lines 183--186
+Overfull \hbox (30.32031pt too wide) in alignment at lines 181--184
  [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (30.32031pt too wide) in alignment at lines 186--189
+Overfull \hbox (30.32031pt too wide) in alignment at lines 184--187
  [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (30.32031pt too wide) in alignment at lines 189--303
+Overfull \hbox (30.32031pt too wide) in alignment at lines 187--301
  [] [] [] [] [] [] [] [] 
  []
 
-c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex:303: ignored error: Infinite glue shrinkage found in box being split [2]
-c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex:303: ignored error: Infinite glue shrinkage found in box being split [3]
+c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex:301: ignored error: Infinite glue shrinkage found in box being split [2]
+c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex:301: ignored error: Infinite glue shrinkage found in box being split [3]
 <figures/digits_learning_curve.jpg, id=135, 505.89pt x 289.08pt>
 File: figures/digits_learning_curve.jpg Graphic file (type jpg)
 <use figures/digits_learning_curve.jpg>
-Package pdftex.def Info: figures/digits_learning_curve.jpg  used on input line 309.
+Package pdftex.def Info: figures/digits_learning_curve.jpg  used on input line 307.
 (pdftex.def)             Requested size: 244.55153pt x 139.74487pt.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 308--313
-[]$[]$
+Overfull \hbox (15.0pt too wide) in paragraph at lines 306--310
+[]$[]$ 
  []
 
 <knn_figures/digits_knn.png, id=136, 570.2103pt x 286.1892pt>
 File: knn_figures/digits_knn.png Graphic file (type png)
 <use knn_figures/digits_knn.png>
-Package pdftex.def Info: knn_figures/digits_knn.png  used on input line 350.
+Package pdftex.def Info: knn_figures/digits_knn.png  used on input line 347.
 (pdftex.def)             Requested size: 489.10307pt x 245.48906pt.
 [4 <./figures/digits_learning_curve.jpg>] [5 <./knn_figures/digits_knn.png>]
 <rf_figures/Digits_all.png, id=148, 462.528pt x 346.896pt>
 File: rf_figures/Digits_all.png Graphic file (type png)
 <use rf_figures/Digits_all.png>
-Package pdftex.def Info: rf_figures/Digits_all.png  used on input line 373.
+Package pdftex.def Info: rf_figures/Digits_all.png  used on input line 370.
 (pdftex.def)             Requested size: 489.10307pt x 366.8452pt.
  [6 <./rf_figures/Digits_all.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 382.
+(hyperref)                removing `math shift' on input line 379.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@underline' on input line 382.
+(hyperref)                removing `\@@underline' on input line 379.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 382.
+(hyperref)                removing `\hbox' on input line 379.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 382.
+(hyperref)                removing `\mathsurround' on input line 379.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 382.
+(hyperref)                removing `\z@' on input line 379.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 382.
+(hyperref)                removing `math shift' on input line 379.
 
 <figures/park_acc_dt.png, id=155, 409.7709pt x 328.8285pt>
 File: figures/park_acc_dt.png Graphic file (type png)
 <use figures/park_acc_dt.png>
-Package pdftex.def Info: figures/park_acc_dt.png  used on input line 447.
+Package pdftex.def Info: figures/park_acc_dt.png  used on input line 444.
 (pdftex.def)             Requested size: 234.76738pt x 188.39253pt.
 <figures/park_f1_dt.png, id=156, 416.2752pt x 328.8285pt>
 File: figures/park_f1_dt.png Graphic file (type png)
 <use figures/park_f1_dt.png>
-Package pdftex.def Info: figures/park_f1_dt.png  used on input line 452.
+Package pdftex.def Info: figures/park_f1_dt.png  used on input line 449.
 (pdftex.def)             Requested size: 234.76738pt x 185.45227pt.
 [7]
 <knn_figures/parkinsons_knn.png, id=162, 570.2103pt x 286.1892pt>
 File: knn_figures/parkinsons_knn.png Graphic file (type png)
 <use knn_figures/parkinsons_knn.png>
-Package pdftex.def Info: knn_figures/parkinsons_knn.png  used on input line 504.
+Package pdftex.def Info: knn_figures/parkinsons_knn.png  used on input line 501.
 (pdftex.def)             Requested size: 489.10307pt x 245.48906pt.
  [8 <./figures/park_acc_dt.png> <./figures/park_f1_dt.png>]
 <rf_figures/Parkinsons_all.png, id=170, 462.528pt x 346.896pt>
 File: rf_figures/Parkinsons_all.png Graphic file (type png)
 <use rf_figures/Parkinsons_all.png>
-Package pdftex.def Info: rf_figures/Parkinsons_all.png  used on input line 522.
+Package pdftex.def Info: rf_figures/Parkinsons_all.png  used on input line 519.
 (pdftex.def)             Requested size: 489.10307pt x 366.8452pt.
  [9 <./knn_figures/parkinsons_knn.png>] [10 <./rf_figures/Parkinsons_all.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 531.
+(hyperref)                removing `math shift' on input line 528.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@underline' on input line 531.
+(hyperref)                removing `\@@underline' on input line 528.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 531.
+(hyperref)                removing `\hbox' on input line 528.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 531.
+(hyperref)                removing `\mathsurround' on input line 528.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 531.
+(hyperref)                removing `\z@' on input line 528.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 531.
+(hyperref)                removing `math shift' on input line 528.
 
 
-Overfull \hbox (20.32028pt too wide) in alignment at lines 538--542
+Overfull \hbox (20.32028pt too wide) in alignment at lines 535--539
  [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (20.32028pt too wide) in alignment at lines 542--547
+Overfull \hbox (20.32028pt too wide) in alignment at lines 539--544
+ [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (20.32028pt too wide) in alignment at lines 544--547
  [] [] [] [] [] [] [] [] 
  []
 
@@ -1217,75 +1222,75 @@ Overfull \hbox (20.32028pt too wide) in alignment at lines 547--550
  []
 
 
-Overfull \hbox (20.32028pt too wide) in alignment at lines 550--553
+Overfull \hbox (20.32028pt too wide) in alignment at lines 550--664
  [] [] [] [] [] [] [] [] 
  []
 
-
-Overfull \hbox (20.32028pt too wide) in alignment at lines 553--667
- [] [] [] [] [] [] [] [] 
- []
-
-c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex:667: ignored error: Infinite glue shrinkage found in box being split [11]
-c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex:667: ignored error: Infinite glue shrinkage found in box being split [12]
+c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex:664: ignored error: Infinite glue shrinkage found in box being split [11]
+c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex:664: ignored error: Infinite glue shrinkage found in box being split [12]
 <figures/rice_learning_curve.jpg, id=193, 505.89pt x 289.08pt>
 File: figures/rice_learning_curve.jpg Graphic file (type jpg)
 <use figures/rice_learning_curve.jpg>
-Package pdftex.def Info: figures/rice_learning_curve.jpg  used on input line 673.
+Package pdftex.def Info: figures/rice_learning_curve.jpg  used on input line 670.
 (pdftex.def)             Requested size: 244.55153pt x 139.74487pt.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 672--676
+Overfull \hbox (15.0pt too wide) in paragraph at lines 669--673
 []$[]$ 
  []
 
 <knn_figures/rice_knn.png, id=194, 564.4287pt x 286.1892pt>
 File: knn_figures/rice_knn.png Graphic file (type png)
 <use knn_figures/rice_knn.png>
-Package pdftex.def Info: knn_figures/rice_knn.png  used on input line 716.
+Package pdftex.def Info: knn_figures/rice_knn.png  used on input line 713.
 (pdftex.def)             Requested size: 489.10307pt x 248.00438pt.
 [13 <./figures/rice_learning_curve.jpg>] [14 <./knn_figures/rice_knn.png>]
 <figures/rice_acc_dt.png, id=206, 411.2163pt x 328.8285pt>
 File: figures/rice_acc_dt.png Graphic file (type png)
 <use figures/rice_acc_dt.png>
-Package pdftex.def Info: figures/rice_acc_dt.png  used on input line 776.
+Package pdftex.def Info: figures/rice_acc_dt.png  used on input line 773.
 (pdftex.def)             Requested size: 234.76738pt x 187.73524pt.
 <figures/rice_f1_dt.png, id=207, 409.7709pt x 328.8285pt>
 File: figures/rice_f1_dt.png Graphic file (type png)
 <use figures/rice_f1_dt.png>
-Package pdftex.def Info: figures/rice_f1_dt.png  used on input line 781.
+Package pdftex.def Info: figures/rice_f1_dt.png  used on input line 778.
 (pdftex.def)             Requested size: 234.76738pt x 188.39253pt.
  [15] [16 <./figures/rice_acc_dt.png> <./figures/rice_f1_dt.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 810.
+(hyperref)                removing `math shift' on input line 807.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@underline' on input line 810.
+(hyperref)                removing `\@@underline' on input line 807.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 810.
+(hyperref)                removing `\hbox' on input line 807.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 810.
+(hyperref)                removing `\mathsurround' on input line 807.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 810.
+(hyperref)                removing `\z@' on input line 807.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 810.
+(hyperref)                removing `math shift' on input line 807.
 
 
-Overfull \hbox (25.3203pt too wide) in alignment at lines 817--821
+Overfull \hbox (25.3203pt too wide) in alignment at lines 814--818
  [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (25.3203pt too wide) in alignment at lines 821--826
+Overfull \hbox (25.3203pt too wide) in alignment at lines 818--823
+ [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (25.3203pt too wide) in alignment at lines 823--826
  [] [] [] [] [] [] [] [] 
  []
 
@@ -1295,45 +1300,40 @@ Overfull \hbox (25.3203pt too wide) in alignment at lines 826--829
  []
 
 
-Overfull \hbox (25.3203pt too wide) in alignment at lines 829--832
+Overfull \hbox (25.3203pt too wide) in alignment at lines 829--943
  [] [] [] [] [] [] [] [] 
  []
 
-
-Overfull \hbox (25.3203pt too wide) in alignment at lines 832--946
- [] [] [] [] [] [] [] [] 
- []
-
-c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex:946: ignored error: Infinite glue shrinkage found in box being split [17]
-c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex:946: ignored error: Infinite glue shrinkage found in box being split [18]
+c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex:943: ignored error: Infinite glue shrinkage found in box being split [17]
+c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex:943: ignored error: Infinite glue shrinkage found in box being split [18]
 <figures/credit_learning_curve.jpg, id=228, 505.89pt x 289.08pt>
 File: figures/credit_learning_curve.jpg Graphic file (type jpg)
 <use figures/credit_learning_curve.jpg>
-Package pdftex.def Info: figures/credit_learning_curve.jpg  used on input line 951.
+Package pdftex.def Info: figures/credit_learning_curve.jpg  used on input line 948.
 (pdftex.def)             Requested size: 244.55153pt x 139.74487pt.
 <knn_figures/credit_knn.png, id=229, 564.4287pt x 286.1892pt>
 File: knn_figures/credit_knn.png Graphic file (type png)
 <use knn_figures/credit_knn.png>
-Package pdftex.def Info: knn_figures/credit_knn.png  used on input line 994.
+Package pdftex.def Info: knn_figures/credit_knn.png  used on input line 991.
 (pdftex.def)             Requested size: 489.10307pt x 248.00438pt.
  [19 <./figures/credit_learning_curve.jpg>] [20 <./knn_figures/credit_knn.png>]
 <figures/credit_acc_dt.png, id=241, 409.7709pt x 328.8285pt>
 File: figures/credit_acc_dt.png Graphic file (type png)
 <use figures/credit_acc_dt.png>
-Package pdftex.def Info: figures/credit_acc_dt.png  used on input line 1051.
+Package pdftex.def Info: figures/credit_acc_dt.png  used on input line 1048.
 (pdftex.def)             Requested size: 234.76738pt x 188.39253pt.
 <figures/credit_f1_dt.png, id=242, 409.7709pt x 328.8285pt>
 File: figures/credit_f1_dt.png Graphic file (type png)
 <use figures/credit_f1_dt.png>
-Package pdftex.def Info: figures/credit_f1_dt.png  used on input line 1056.
+Package pdftex.def Info: figures/credit_f1_dt.png  used on input line 1053.
 (pdftex.def)             Requested size: 234.76738pt x 188.39253pt.
  [21] [22 <./figures/credit_acc_dt.png> <./figures/credit_f1_dt.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1080.
+               Default added (so using `tbp') on input line 1077.
 
 
-Overfull \hbox (29.3977pt too wide) in paragraph at lines 1081--1090
+Overfull \hbox (29.3977pt too wide) in paragraph at lines 1078--1087
 [][] 
  []
 
@@ -1350,15 +1350,15 @@ Package rerunfilecheck Info: File `FINAL.out' has not changed.
 (rerunfilecheck)             Checksum: 7B8BB2397B978FE79BA0BE2742CC5899;2687.
  ) 
 Here is how much of TeX's memory you used:
- 36480 strings out of 467533
- 713140 string characters out of 5423662
+ 36476 strings out of 467533
+ 713106 string characters out of 5423662
  1342961 words of memory out of 5000000
  64630 multiletter control sequences out of 15000+600000
- 639202 words of font info for 130 fonts, out of 8000000 for 9000
+ 639091 words of font info for 128 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,9n,108p,1052b,639s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on FINAL.pdf (23 pages, 524870 bytes).
+Output written on FINAL.pdf (23 pages, 524455 bytes).
 PDF statistics:
  311 PDF objects out of 1000 (max. 8388607)
  216 compressed objects within 3 object streams
