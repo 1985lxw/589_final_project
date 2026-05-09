@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.28)  8 MAY 2026 19:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.28)  8 MAY 2026 20:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1046,35 +1046,35 @@ Package microtype Info: Loading generic protrusion settings for font family
 {c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 159.
+(hyperref)                removing `math shift' on input line 163.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@underline' on input line 159.
+(hyperref)                removing `\@@underline' on input line 163.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 159.
+(hyperref)                removing `\hbox' on input line 163.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 159.
+(hyperref)                removing `\mathsurround' on input line 163.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 159.
+(hyperref)                removing `\z@' on input line 163.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 159.
+(hyperref)                removing `math shift' on input line 163.
 
 <knn_figures/digits_knn.png, id=125, 570.2103pt x 286.1892pt>
 File: knn_figures/digits_knn.png Graphic file (type png)
 <use knn_figures/digits_knn.png>
-Package pdftex.def Info: knn_figures/digits_knn.png  used on input line 200.
+Package pdftex.def Info: knn_figures/digits_knn.png  used on input line 204.
 (pdftex.def)             Requested size: 317.914pt x 159.56613pt.
 
-Overfull \hbox (128.62796pt too wide) in paragraph at lines 167--205
+Overfull \hbox (128.62796pt too wide) in paragraph at lines 171--209
 [] [] 
  []
 
@@ -1084,78 +1084,79 @@ Overfull \hbox (128.62796pt too wide) in paragraph at lines 167--205
 <rf_figures/Digits_all.png, id=133, 462.528pt x 346.896pt>
 File: rf_figures/Digits_all.png Graphic file (type png)
 <use rf_figures/Digits_all.png>
-Package pdftex.def Info: rf_figures/Digits_all.png  used on input line 221.
+Package pdftex.def Info: rf_figures/Digits_all.png  used on input line 225.
 (pdftex.def)             Requested size: 317.914pt x 238.44806pt.
 
 
 [3 <./rf_figures/Digits_all.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 232.
+(hyperref)                removing `math shift' on input line 236.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@underline' on input line 232.
+(hyperref)                removing `\@@underline' on input line 236.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 232.
+(hyperref)                removing `\hbox' on input line 236.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 232.
+(hyperref)                removing `\mathsurround' on input line 236.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 232.
+(hyperref)                removing `\z@' on input line 236.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 232.
+(hyperref)                removing `math shift' on input line 236.
 
 <knn_figures/parkinsons_knn.png, id=140, 570.2103pt x 286.1892pt>
 File: knn_figures/parkinsons_knn.png Graphic file (type png)
 <use knn_figures/parkinsons_knn.png>
-Package pdftex.def Info: knn_figures/parkinsons_knn.png  used on input line 277.
+Package pdftex.def Info: knn_figures/parkinsons_knn.png  used on input line 281.
 (pdftex.def)             Requested size: 317.914pt x 159.56613pt.
-<rf_figures/Parkinsons_all.png, id=141, 462.528pt x 346.896pt>
-File: rf_figures/Parkinsons_all.png Graphic file (type png)
-<use rf_figures/Parkinsons_all.png>
-Package pdftex.def Info: rf_figures/Parkinsons_all.png  used on input line 297.
-(pdftex.def)             Requested size: 317.914pt x 238.44806pt.
 
 
 [4 <./knn_figures/parkinsons_knn.png>]
+<rf_figures/Parkinsons_all.png, id=147, 462.528pt x 346.896pt>
+File: rf_figures/Parkinsons_all.png Graphic file (type png)
+<use rf_figures/Parkinsons_all.png>
+Package pdftex.def Info: rf_figures/Parkinsons_all.png  used on input line 300.
+(pdftex.def)             Requested size: 317.914pt x 238.44806pt.
+
 
 [5 <./rf_figures/Parkinsons_all.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 307.
+(hyperref)                removing `math shift' on input line 308.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@underline' on input line 307.
+(hyperref)                removing `\@@underline' on input line 308.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 307.
+(hyperref)                removing `\hbox' on input line 308.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 307.
+(hyperref)                removing `\mathsurround' on input line 308.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 307.
+(hyperref)                removing `\z@' on input line 308.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 307.
+(hyperref)                removing `math shift' on input line 308.
 
 <knn_figures/rice_knn.png, id=154, 564.4287pt x 286.1892pt>
 File: knn_figures/rice_knn.png Graphic file (type png)
 <use knn_figures/rice_knn.png>
-Package pdftex.def Info: knn_figures/rice_knn.png  used on input line 351.
+Package pdftex.def Info: knn_figures/rice_knn.png  used on input line 352.
 (pdftex.def)             Requested size: 317.914pt x 161.19936pt.
 
 
@@ -1163,12 +1164,12 @@ Package pdftex.def Info: knn_figures/rice_knn.png  used on input line 351.
 <figures/rice_acc_dt.png, id=161, 411.2163pt x 328.8285pt>
 File: figures/rice_acc_dt.png Graphic file (type png)
 <use figures/rice_acc_dt.png>
-Package pdftex.def Info: figures/rice_acc_dt.png  used on input line 418.
+Package pdftex.def Info: figures/rice_acc_dt.png  used on input line 421.
 (pdftex.def)             Requested size: 234.76738pt x 187.73524pt.
 <figures/rice_f1_dt.png, id=162, 409.7709pt x 328.8285pt>
 File: figures/rice_f1_dt.png Graphic file (type png)
 <use figures/rice_f1_dt.png>
-Package pdftex.def Info: figures/rice_f1_dt.png  used on input line 424.
+Package pdftex.def Info: figures/rice_f1_dt.png  used on input line 427.
 (pdftex.def)             Requested size: 234.76738pt x 188.39253pt.
 
 
@@ -1177,55 +1178,55 @@ Package pdftex.def Info: figures/rice_f1_dt.png  used on input line 424.
 [8 <./figures/rice_acc_dt.png> <./figures/rice_f1_dt.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 444.
+(hyperref)                removing `math shift' on input line 447.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@underline' on input line 444.
+(hyperref)                removing `\@@underline' on input line 447.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 444.
+(hyperref)                removing `\hbox' on input line 447.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 444.
+(hyperref)                removing `\mathsurround' on input line 447.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 444.
+(hyperref)                removing `\z@' on input line 447.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 444.
+(hyperref)                removing `math shift' on input line 447.
 
 <knn_figures/credit_knn.png, id=175, 564.4287pt x 286.1892pt>
 File: knn_figures/credit_knn.png Graphic file (type png)
 <use knn_figures/credit_knn.png>
-Package pdftex.def Info: knn_figures/credit_knn.png  used on input line 488.
+Package pdftex.def Info: knn_figures/credit_knn.png  used on input line 491.
 (pdftex.def)             Requested size: 317.914pt x 161.19936pt.
 
 
 [9 <./knn_figures/credit_knn.png>]
-<figures/credit_acc_dt.png, id=183, 409.7709pt x 328.8285pt>
+<figures/credit_acc_dt.png, id=184, 409.7709pt x 328.8285pt>
 File: figures/credit_acc_dt.png Graphic file (type png)
 <use figures/credit_acc_dt.png>
-Package pdftex.def Info: figures/credit_acc_dt.png  used on input line 549.
+Package pdftex.def Info: figures/credit_acc_dt.png  used on input line 551.
 (pdftex.def)             Requested size: 234.76738pt x 188.39253pt.
-<figures/credit_f1_dt.png, id=184, 409.7709pt x 328.8285pt>
+<figures/credit_f1_dt.png, id=185, 409.7709pt x 328.8285pt>
 File: figures/credit_f1_dt.png Graphic file (type png)
 <use figures/credit_f1_dt.png>
-Package pdftex.def Info: figures/credit_f1_dt.png  used on input line 555.
+Package pdftex.def Info: figures/credit_f1_dt.png  used on input line 557.
 (pdftex.def)             Requested size: 234.76738pt x 188.39253pt.
 
 
 [10]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 561.
+               Default added (so using `tbp') on input line 563.
 
 
-Overfull \hbox (73.20331pt too wide) in paragraph at lines 562--570
+Overfull \hbox (73.20331pt too wide) in paragraph at lines 564--572
 [][] 
  []
 
@@ -1242,18 +1243,18 @@ Package rerunfilecheck Info: File `FINAL.out' has not changed.
 (rerunfilecheck)             Checksum: 75554D09CA1F382500E86F9EAD8BE44F;2692.
  ) 
 Here is how much of TeX's memory you used:
- 36140 strings out of 473201
- 705894 string characters out of 5720299
+ 36154 strings out of 473201
+ 706002 string characters out of 5720299
  1266322 words of memory out of 5000000
  58685 multiletter control sequences out of 15000+600000
- 568748 words of font info for 106 fonts, out of 8000000 for 9000
+ 569114 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,9n,101p,1050b,665s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on FINAL.pdf (12 pages, 375107 bytes).
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on FINAL.pdf (12 pages, 386799 bytes).
 PDF statistics:
- 246 PDF objects out of 1000 (max. 8388607)
- 172 compressed objects within 2 object streams
+ 251 PDF objects out of 1000 (max. 8388607)
+ 175 compressed objects within 2 object streams
  39 named destinations out of 1000 (max. 500000)
  29527 words of extra memory for PDF output out of 29859 (max. 10000000)
 
