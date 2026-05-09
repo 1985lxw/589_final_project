@@ -362,8 +362,9 @@ After k=1, the performance gradually increases until it hits a plateau at around
 We chose to test decision trees on the rice dataset 
 because it has a moderate number of features (7) and a 
 relatively large number of samples (3810), which allows 
-us to explore how different tree depths and minimum split 
-sizes affect performance.
+us to test two different hyperparameters; tree depths and 
+minimum split sizes. This is shown in the tuning results below, 
+where we tested 6 different tree depths and 4 different minimum split sizes.
 
 \begin{verbatim}
 Tuning for dataset with 3810 rows and 7 features.
@@ -415,13 +416,12 @@ Testing F1 Score: 0.9215
 
 \begin{figure}[htbp]
     \centering
-    % First Image
+    
     \begin{minipage}{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/rice_acc_dt.png}
         \caption{Rice Accuracy Distribution}
-    \end{minipage}\hfill % This adds horizontal space between the two
-    % Second Image
+    \end{minipage}\hfill 
     \begin{minipage}{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/rice_f1_dt.png}
@@ -433,9 +433,10 @@ For both models, the training scores are highly concentrated around 0.92,
 while the testing scores are more spread out, with a mean around 0.923 for 
 accuracy and 0.922 for F1 score. The training performance suggests that 
 the models have high stability and low bias, however, the testing performance 
-indicates that there may be some sensitivity to the specific training data used in each fold.
+indicates that there may be some sensitivity to the specific training data used in each fold, leading to a poor local optimum.
 Since the mean training scores are very close to the mean testing scores, it suggests 
-that the models are robust and are not overfitting.
+that the models are robust and are not overfitting. The accuracy and F1 scores are also very close to each other 
+which suggests that the models are performing well across all labels in the dataset and that the labels in the dataset are balanced.
 Decision trees can easily split numerical features to find precise boundaries, 
 so they are well-suited for the rice dataset, which consists of numerical attributes.
 
@@ -495,7 +496,11 @@ k & Accuracy & F1 Score \\
 Similar to the rice data set, the performance increases after k=1 (though more sharply for this dataset) and begins a relative plateau in performance. However, there are slightly more fluctuations in this plateau with an average fluctuation of about $\pm 1\%$. The best performance is at $k=7$ at 87\% accuracy and 86\% F1 score. We chose KNN for this dataset because it is robust on categorical and numerical data, and it is a relatively small dataset meaning that it will run relatively fast for KNN.  
 
 \subsection{Decision Trees Algorithm}
-
+We chose to test decision trees on the credit approval dataset because 
+it has a moderate number of features (15) and a relatively small number of samples (653), 
+which allows us to test two different hyperparameters; tree depths and minimum split sizes.
+This is shown in the tuning results below where we tested 6 different tree depths and 
+4 different minimum split sizes.
 \begin{verbatim}
 Tuning for dataset with 653 rows and 15 features.
 Testing Depths: [2, 4, 6, 8, 10, 12]
@@ -545,19 +550,27 @@ Testing F1 Score: 0.8601
 
 \begin{figure}[htbp]
     \centering
-    % First Image
     \begin{minipage}{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/credit_acc_dt.png}
         \caption{Credit Approval Accuracy Distribution}
-    \end{minipage}\hfill % This adds horizontal space between the two
-    % Second Image
+    \end{minipage}\hfill 
     \begin{minipage}{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/credit_f1_dt.png}
         \caption{Credit Approval F1 Score Distribution}
     \end{minipage}
 \end{figure}
+
+The test scores are widley spread which suggests the model is sensitive to the specific training data 
+used in each fold, leading to a poor local optimum. Especially in smaller datasets, the presence/absence
+of a few instances in a training fold can have a significant impact on the tree structure and thus the performance. 
+The training scores are more concentrated around 0.87, while some test folds outperform the training performance.
+This suggests that the model is stable during training, but is not consistent on generalizing depending on the test fold.
+The accuracy and F1 scores are also very close to each other which suggests that the model is performing well across all labels in the dataset and that the labels in the dataset are balanced. 
+Since the credit approval dataset has some categorical features, they need to be factorized. If there are a lot of
+unique values in a categorical feature, it can lead to a large number of splits in the decision tree, which may be why there is more spread in the test scores for this dataset.
+
 
 \newpage
 \begin{table}[]
