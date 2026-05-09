@@ -7,29 +7,58 @@ from sklearn.model_selection import train_test_split
 def pred(X, Thetas, activation):
     """Helper function to calculate model predictions."""
     A, _ = forwardprop(X, Thetas, activation)
-    AL = A[-1] 
-    return AL.ravel()
+    return A[-1]
 
 def predict(X, Thetas, activation, threshold=0.5):
     """Helper function to determine model classifications."""
     probs = pred(X, Thetas, activation)
-    return (probs >= threshold).astype(int)
+
+    if probs.ndim == 1 or probs.shape[0] == 1:
+        probs = probs.ravel()
+        return (probs >= threshold).astype(int)
+
+    return np.argmax(probs, axis=0)
 
 def evaluate_model(X, y, Thetas, activation, threshold=0.5):
     """Helper function to calculate accuracy and f1-value of model."""
     y_true = np.asarray(y).ravel().astype(int)
     y_pred = predict(X, Thetas, activation, threshold=threshold)
 
-    tp = np.sum((y_true == 1) & (y_pred == 1))
-    tn = np.sum((y_true == 0) & (y_pred == 0))
-    fp = np.sum((y_true == 0) & (y_pred == 1))
-    fn = np.sum((y_true == 1) & (y_pred == 0))
+    if len(np.unique(y_true)) == 2:
+        tp = np.sum((y_true == 1) & (y_pred == 1))
+        tn = np.sum((y_true == 0) & (y_pred == 0))
+        fp = np.sum((y_true == 0) & (y_pred == 1))
+        fn = np.sum((y_true == 1) & (y_pred == 0))
 
-    accuracy = (tp + tn) / len(y_true)
+        accuracy = (tp + tn) / (tp + tn + fp + fn)
+        precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
+        recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
 
-    precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
-    recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
-    f1 = (2 * precision * recall) / (precision + recall) if (precision + recall) > 0 else 0.0
+        f1 = (
+            2 * precision * recall / (precision + recall)
+            if (precision + recall) > 0 else 0.0
+        )
+    else:
+        accuracy = np.mean(y_true == y_pred)
+        classes = np.unique(y_true)
+        f1s = []
+
+        for cls in classes:
+            tp = np.sum((y_true == cls) & (y_pred == cls))
+            fp = np.sum((y_true != cls) & (y_pred == cls))
+            fn = np.sum((y_true == cls) & (y_pred != cls))
+
+            precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
+            recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
+
+            f1_cls = (
+                2 * precision * recall / (precision + recall)
+                if (precision + recall) > 0 else 0.0
+            )
+
+            f1s.append(f1_cls)
+
+        f1 = np.mean(f1s)
 
     return accuracy, f1
 
@@ -46,25 +75,28 @@ def normalize_train_test(X_train, X_test):
 
 def make_k_stratified_folds(D, k):
     """Helper function to make k stratified folds."""
-    D_0 = D[D[:, -1] == 0]
-    D_1 = D[D[:, -1] == 1]
+    y = D[:, -1]
+    classes = np.unique(y)
 
-    np.random.default_rng().shuffle(D_0)
-    np.random.default_rng().shuffle(D_1)
+    class_folds = {}
 
-    folds_0 = np.array_split(D_0, k)
-    folds_1 = np.array_split(D_1, k)
+    for cls in classes:
+        class_rows = D[y == cls]
+        shuffled = class_rows.copy()
+        np.random.default_rng().shuffle(shuffled)
+        class_folds[cls] = np.array_split(shuffled, k)
 
     folds = []
 
     for i in range(k):
-        fold = np.concatenate([folds_0[i], folds_1[i]], axis=0)
+        fold = np.concatenate([class_folds[cls][i] for cls in classes], axis=0)
+        np.random.default_rng().shuffle(fold)
         folds.append(fold)
 
     return folds
 
 
-def stratified_k_fold_validation(D, architectures, lambdas, k, alphas, activation=sigmoid, num_epochs=1000, batch_size=None):
+def stratified_k_fold_validation(D, architectures, lambdas, k, alphas, activation=sigmoid, cost_fn=cost, num_epochs=1000, batch_size=None):
     """Returns the results of running k-fold validation neural network"""
     
     performances = []
@@ -73,7 +105,14 @@ def stratified_k_fold_validation(D, architectures, lambdas, k, alphas, activatio
     folds = make_k_stratified_folds(D, k)
 
     for layers in architectures:
-        layer_sizes = [num_features] + list(layers) + [1]
+        num_classes = len(np.unique(D[:, -1]))
+
+        if num_classes == 2:
+            output_size = 1
+        else:
+            output_size = num_classes
+
+        layer_sizes = [num_features] + list(layers) + [output_size]
 
         for lambda_reg in lambdas:
             for alpha in alphas:
@@ -93,11 +132,17 @@ def stratified_k_fold_validation(D, architectures, lambdas, k, alphas, activatio
 
                     X_train, X_test = normalize_train_test(X_train, X_test)
 
+                    if output_size > 1:
+                        y_train_encoded = np.eye(output_size)[y_train.astype(int)].T
+                    else:
+                        y_train_encoded = y_train
+
                     Thetas, _ = nn(
                         X_train,
-                        y_train,
+                        y_train_encoded,
                         layer_sizes=layer_sizes,
                         activation=activation,
+                        cost_fn=cost_fn,
                         alpha=alpha,
                         lambda_reg=lambda_reg,
                         num_epochs=num_epochs,
@@ -143,7 +188,14 @@ def learning_curve_cost(D, hidden_layers, lambda_reg, alpha, train_sizes, cost_f
     used_sizes = []
 
     num_features = X.shape[1]
-    layer_sizes = [num_features] + list(hidden_layers) + [1]
+    num_classes = len(np.unique(D[:, -1]))
+
+    if num_classes == 2:
+        output_size = 1
+    else:
+        output_size = num_classes
+
+    layer_sizes = [num_features] + list(hidden_layers) + [output_size]
 
     for n_train in train_sizes:
         if n_train > len(X_train_full):
@@ -155,11 +207,19 @@ def learning_curve_cost(D, hidden_layers, lambda_reg, alpha, train_sizes, cost_f
             stratify=y_train_full
         )
 
+        if output_size > 1:
+            y_sub_encoded = np.eye(output_size)[y_sub.astype(int)].T
+            y_test_encoded = np.eye(output_size)[y_test.astype(int)].T
+        else:
+            y_sub_encoded = y_sub.reshape(1, -1)
+            y_test_encoded = y_test.reshape(1, -1)
+
         Thetas, _ = nn(
             X_sub_raw,
-            y_sub,
+            y_sub_encoded,
             layer_sizes=layer_sizes,
             activation=activation,
+            cost_fn=cost_fn,
             alpha=alpha,
             lambda_reg=lambda_reg,
             num_epochs=num_epochs,
@@ -169,9 +229,8 @@ def learning_curve_cost(D, hidden_layers, lambda_reg, alpha, train_sizes, cost_f
 
         A, _ = forwardprop(X_test_normalized, Thetas, activation)
         AL = A[-1]
-        y_test_2d = y_test.reshape(1, -1)
 
-        J_test = cost_fn(y_test_2d, AL, Thetas, lambda_reg)
+        J_test = cost_fn(y_test_encoded, AL, Thetas, lambda_reg)
 
         used_sizes.append(n_train)
         test_costs.append(J_test)
@@ -185,4 +244,4 @@ def plot_learning_curve(train_sizes, costs, dataset_name, title="Learning Curve"
     plt.ylabel("Cost J")
     plt.title(title)
     plt.grid(True)
-    plt.savefig("figures/" + dataset_name + "_learning_curve" + ".jpg")
+    plt.savefig("2tmp/" + dataset_name + "_learning_curve" + ".jpg")
