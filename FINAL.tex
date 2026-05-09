@@ -143,7 +143,7 @@
     the $\lambda$ (regularization) parameter, 
     and the $\alpha$ (learning rate) parameter. 
     \item \textbf{Tiffany} implemented KNN and Random Forest. She evaluated the hyperparameters k for kNN and ntree for random forest.
-    \item \textbf{Xing-Wei} implemented Decision Trees
+    \item \textbf{Xing-Wei} implemented Decision Trees. She evaluated the hyperparameters max depth and minimum split size.
 \end{itemize}
 
 % --------------------
@@ -163,7 +163,6 @@
 \section{\underline{The Hand-Written Digits Recognition Dataset}}
 \subsection{Neural Networks Algorithm}
 
-TODO
 
 \noindent\rule{\textwidth}{0.5pt}
 
@@ -235,9 +234,86 @@ Technically the highest accuracy and f1 occurs at ntree=20 and ntree=50 because 
 
 \section{\underline{The Oxford Parkinson's Disease Detection Dataset}}
 
-\subsection{Neural Networks Algorithm}
+\subsection{Decision Trees Algorithm}
+We chose to use decision trees for this dataset because decision trees are best at finding precise boundaries 
+when there are only numerical features. This is the case for the Parkinson's dataset, which has 22 numerical 
+features and no categorical features. We use the hyperparameters of max depth and minimum split size to control 
+the complexity of the decision tree. Below we tested 7 different tree depths and 4 different minimum split sizes.  
 
-TODO
+\begin{verbatim}
+Tuning for dataset with 195 rows and 22 features.
+Testing Depths: [2, 3, 5, 7, 9, 11, 13]
+Testing Splits: [9, 19, 29, 39]
+
+Depth    | Split    | Test Acc   | Test F1   
+---------------------------------------------
+2        | 9        | 0.8503     | 0.8065
+2        | 19       | 0.8117     | 0.7631
+2        | 29       | 0.8454     | 0.7922
+2        | 39       | 0.8625     | 0.7836
+3        | 9        | 0.8681     | 0.8278
+3        | 19       | 0.8312     | 0.7890
+3        | 29       | 0.8309     | 0.7553
+3        | 39       | 0.8620     | 0.7975
+5        | 9        | 0.8575     | 0.8157
+5        | 19       | 0.8556     | 0.8171
+5        | 29       | 0.8362     | 0.7784
+5        | 39       | 0.8611     | 0.7906
+7        | 9        | 0.8456     | 0.8050
+7        | 19       | 0.8211     | 0.7456
+7        | 29       | 0.8312     | 0.7815
+7        | 39       | 0.8617     | 0.7912
+9        | 9        | 0.8323     | 0.7762
+9        | 19       | 0.8515     | 0.8086
+9        | 29       | 0.8534     | 0.8038
+9        | 39       | 0.8512     | 0.7767
+11       | 9        | 0.8562     | 0.7975
+11       | 19       | 0.8220     | 0.7627
+11       | 29       | 0.8273     | 0.7595
+11       | 39       | 0.8606     | 0.7840
+13       | 9        | 0.8628     | 0.8177
+13       | 19       | 0.8361     | 0.7720
+13       | 29       | 0.8348     | 0.7692
+13       | 39       | 0.8495     | 0.7635
+
+==============================
+BEST CONFIGURATION:
+Max Depth: 3
+Min Split: 9
+F1 Score:  0.8278
+==============================
+\end{verbatim}
+
+\begin{verbatim}
+Final Results:
+Training Accuracy: 0.9345
+Training F1 Score: 0.9165
+Testing Accuracy: 0.8508
+Testing F1 Score: 0.8101  
+\end{verbatim}
+
+\begin{figure}[H]
+    \centering
+    
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/park_acc_dt.png}
+        \caption{Parkinson's Accuracy Distribution}
+    \end{minipage}\hfill 
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/park_f1_dt.png}
+        \caption{Parkinson's F1 Score Distribution}
+    \end{minipage}
+\end{figure}
+
+There is high variance on the testing scores, which may be due to the small size of the dataset making the model
+very sensitive to specific training data in each fold. 
+The training scores are very concentrated around 0.93 which suggests high stability and low bias. 
+There is a clear difference between the average training and testing scores, which suggest the model may be overfitting.
+Since the model is sensitive to specific training data, the model is less robust and may not generalize well to unseen data.
+Decision trees are well suited for numerical datasets, but when the sample size is small, the splits can become too specific
+to a training set which leads to the variance seen in testing.
 
 \noindent\rule{\textwidth}{0.5pt}
 

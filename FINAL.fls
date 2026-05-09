@@ -426,6 +426,16 @@ INPUT ./rf_figures/Digits_all.png
 INPUT ./rf_figures/Digits_all.png
 INPUT ./rf_figures/Digits_all.png
 INPUT ./rf_figures/Digits_all.png
+INPUT ./figures/park_acc_dt.png
+INPUT ./figures/park_acc_dt.png
+INPUT ./figures/park_acc_dt.png
+INPUT ./figures/park_acc_dt.png
+INPUT ./figures/park_acc_dt.png
+INPUT ./figures/park_f1_dt.png
+INPUT ./figures/park_f1_dt.png
+INPUT ./figures/park_f1_dt.png
+INPUT ./figures/park_f1_dt.png
+INPUT ./figures/park_f1_dt.png
 INPUT ./knn_figures/parkinsons_knn.png
 INPUT ./knn_figures/parkinsons_knn.png
 INPUT ./knn_figures/parkinsons_knn.png

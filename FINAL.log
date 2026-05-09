@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.2.17)  8 MAY 2026 21:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.2.17)  8 MAY 2026 21:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1077,163 +1077,174 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 <knn_figures/digits_knn.png, id=125, 570.2103pt x 286.1892pt>
 File: knn_figures/digits_knn.png Graphic file (type png)
 <use knn_figures/digits_knn.png>
-Package pdftex.def Info: knn_figures/digits_knn.png  used on input line 204.
+Package pdftex.def Info: knn_figures/digits_knn.png  used on input line 203.
 (pdftex.def)             Requested size: 489.10307pt x 245.48906pt.
 [2]
 <rf_figures/Digits_all.png, id=131, 462.528pt x 346.896pt>
 File: rf_figures/Digits_all.png Graphic file (type png)
 <use rf_figures/Digits_all.png>
-Package pdftex.def Info: rf_figures/Digits_all.png  used on input line 227.
+Package pdftex.def Info: rf_figures/Digits_all.png  used on input line 226.
 (pdftex.def)             Requested size: 489.10307pt x 366.8452pt.
  [3 <./knn_figures/digits_knn.png>] [4 <./rf_figures/Digits_all.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 236.
+(hyperref)                removing `math shift' on input line 235.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@underline' on input line 236.
+(hyperref)                removing `\@@underline' on input line 235.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 236.
+(hyperref)                removing `\hbox' on input line 235.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 236.
+(hyperref)                removing `\mathsurround' on input line 235.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 236.
+(hyperref)                removing `\z@' on input line 235.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 236.
+(hyperref)                removing `math shift' on input line 235.
 
-<knn_figures/parkinsons_knn.png, id=144, 570.2103pt x 286.1892pt>
+<figures/park_acc_dt.png, id=144, 409.7709pt x 328.8285pt>
+File: figures/park_acc_dt.png Graphic file (type png)
+<use figures/park_acc_dt.png>
+Package pdftex.def Info: figures/park_acc_dt.png  used on input line 300.
+(pdftex.def)             Requested size: 234.76738pt x 188.39253pt.
+<figures/park_f1_dt.png, id=145, 416.2752pt x 328.8285pt>
+File: figures/park_f1_dt.png Graphic file (type png)
+<use figures/park_f1_dt.png>
+Package pdftex.def Info: figures/park_f1_dt.png  used on input line 305.
+(pdftex.def)             Requested size: 234.76738pt x 185.45227pt.
+[5]
+<knn_figures/parkinsons_knn.png, id=150, 570.2103pt x 286.1892pt>
 File: knn_figures/parkinsons_knn.png Graphic file (type png)
 <use knn_figures/parkinsons_knn.png>
-Package pdftex.def Info: knn_figures/parkinsons_knn.png  used on input line 281.
+Package pdftex.def Info: knn_figures/parkinsons_knn.png  used on input line 357.
 (pdftex.def)             Requested size: 489.10307pt x 245.48906pt.
-[5]
-<rf_figures/Parkinsons_all.png, id=149, 462.528pt x 346.896pt>
+ [6 <./figures/park_acc_dt.png> <./figures/park_f1_dt.png>]
+<rf_figures/Parkinsons_all.png, id=158, 462.528pt x 346.896pt>
 File: rf_figures/Parkinsons_all.png Graphic file (type png)
 <use rf_figures/Parkinsons_all.png>
-Package pdftex.def Info: rf_figures/Parkinsons_all.png  used on input line 299.
+Package pdftex.def Info: rf_figures/Parkinsons_all.png  used on input line 375.
 (pdftex.def)             Requested size: 489.10307pt x 366.8452pt.
- [6 <./knn_figures/parkinsons_knn.png>] [7 <./rf_figures/Parkinsons_all.png>]
+ [7 <./knn_figures/parkinsons_knn.png>] [8 <./rf_figures/Parkinsons_all.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 308.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@underline' on input line 308.
+(hyperref)                removing `math shift' on input line 384.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 308.
+(hyperref)                removing `\@@underline' on input line 384.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 308.
+(hyperref)                removing `\hbox' on input line 384.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 308.
+(hyperref)                removing `\mathsurround' on input line 384.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 308.
+(hyperref)                removing `\z@' on input line 384.
 
-<knn_figures/rice_knn.png, id=163, 564.4287pt x 286.1892pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 384.
+
+<knn_figures/rice_knn.png, id=172, 564.4287pt x 286.1892pt>
 File: knn_figures/rice_knn.png Graphic file (type png)
 <use knn_figures/rice_knn.png>
-Package pdftex.def Info: knn_figures/rice_knn.png  used on input line 352.
+Package pdftex.def Info: knn_figures/rice_knn.png  used on input line 428.
 (pdftex.def)             Requested size: 489.10307pt x 248.00438pt.
-[8] [9 <./knn_figures/rice_knn.png>]
-<figures/rice_acc_dt.png, id=174, 411.2163pt x 328.8285pt>
+[9] [10 <./knn_figures/rice_knn.png>]
+<figures/rice_acc_dt.png, id=183, 411.2163pt x 328.8285pt>
 File: figures/rice_acc_dt.png Graphic file (type png)
 <use figures/rice_acc_dt.png>
-Package pdftex.def Info: figures/rice_acc_dt.png  used on input line 412.
+Package pdftex.def Info: figures/rice_acc_dt.png  used on input line 488.
 (pdftex.def)             Requested size: 234.76738pt x 187.73524pt.
-<figures/rice_f1_dt.png, id=175, 409.7709pt x 328.8285pt>
+<figures/rice_f1_dt.png, id=184, 409.7709pt x 328.8285pt>
 File: figures/rice_f1_dt.png Graphic file (type png)
 <use figures/rice_f1_dt.png>
-Package pdftex.def Info: figures/rice_f1_dt.png  used on input line 417.
+Package pdftex.def Info: figures/rice_f1_dt.png  used on input line 493.
 (pdftex.def)             Requested size: 234.76738pt x 188.39253pt.
- [10 <./figures/rice_acc_dt.png> <./figures/rice_f1_dt.png>]
+ [11 <./figures/rice_acc_dt.png> <./figures/rice_f1_dt.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 446.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@underline' on input line 446.
+(hyperref)                removing `math shift' on input line 522.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 446.
+(hyperref)                removing `\@@underline' on input line 522.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 446.
+(hyperref)                removing `\hbox' on input line 522.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 446.
+(hyperref)                removing `\mathsurround' on input line 522.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 446.
+(hyperref)                removing `\z@' on input line 522.
 
-<knn_figures/credit_knn.png, id=183, 564.4287pt x 286.1892pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 522.
+
+<knn_figures/credit_knn.png, id=193, 564.4287pt x 286.1892pt>
 File: knn_figures/credit_knn.png Graphic file (type png)
 <use knn_figures/credit_knn.png>
-Package pdftex.def Info: knn_figures/credit_knn.png  used on input line 490.
+Package pdftex.def Info: knn_figures/credit_knn.png  used on input line 566.
 (pdftex.def)             Requested size: 489.10307pt x 248.00438pt.
-[11] [12 <./knn_figures/credit_knn.png>]
-<figures/credit_acc_dt.png, id=195, 409.7709pt x 328.8285pt>
+[12] [13 <./knn_figures/credit_knn.png>]
+<figures/credit_acc_dt.png, id=205, 409.7709pt x 328.8285pt>
 File: figures/credit_acc_dt.png Graphic file (type png)
 <use figures/credit_acc_dt.png>
-Package pdftex.def Info: figures/credit_acc_dt.png  used on input line 547.
+Package pdftex.def Info: figures/credit_acc_dt.png  used on input line 623.
 (pdftex.def)             Requested size: 234.76738pt x 188.39253pt.
-<figures/credit_f1_dt.png, id=196, 409.7709pt x 328.8285pt>
+<figures/credit_f1_dt.png, id=206, 409.7709pt x 328.8285pt>
 File: figures/credit_f1_dt.png Graphic file (type png)
 <use figures/credit_f1_dt.png>
-Package pdftex.def Info: figures/credit_f1_dt.png  used on input line 552.
+Package pdftex.def Info: figures/credit_f1_dt.png  used on input line 628.
 (pdftex.def)             Requested size: 234.76738pt x 188.39253pt.
- [13 <./figures/credit_acc_dt.png> <./figures/credit_f1_dt.png>]
+ [14 <./figures/credit_acc_dt.png> <./figures/credit_f1_dt.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 576.
+               Default added (so using `tbp') on input line 652.
 
 
-Overfull \hbox (29.3977pt too wide) in paragraph at lines 577--586
+Overfull \hbox (29.3977pt too wide) in paragraph at lines 653--662
 [][] 
  []
 
-[14] (./FINAL.aux)
+[15] (./FINAL.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `FINAL.out' has not changed.
-(rerunfilecheck)             Checksum: 75554D09CA1F382500E86F9EAD8BE44F;2692.
+(rerunfilecheck)             Checksum: 7B8BB2397B978FE79BA0BE2742CC5899;2687.
  ) 
 Here is how much of TeX's memory you used:
- 36385 strings out of 467533
- 711348 string characters out of 5423662
- 1278483 words of memory out of 5000000
- 64585 multiletter control sequences out of 15000+600000
- 637692 words of font info for 111 fonts, out of 8000000 for 9000
+ 36413 strings out of 467533
+ 711879 string characters out of 5423662
+ 1285483 words of memory out of 5000000
+ 64599 multiletter control sequences out of 15000+600000
+ 638007 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,9n,108p,1052b,727s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on FINAL.pdf (14 pages, 378044 bytes).
+Output written on FINAL.pdf (15 pages, 410073 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 179 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
- 29527 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 265 PDF objects out of 1000 (max. 8388607)
+ 184 compressed objects within 2 object streams
+ 43 named destinations out of 1000 (max. 500000)
+ 29537 words of extra memory for PDF output out of 29859 (max. 10000000)
 
