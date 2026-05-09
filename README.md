@@ -14,3 +14,4 @@ For this project, we conduct a comparative analysis of various machine learning 
 - Rice Grain Images: A numerical dataset featuring morphological measurements where algorithms demonstrated high stability and consistent performance.
 - Credit Approval: A mixed-feature dataset ($15$ features, $653$ samples) containing categorical attributes that require factorization for processing.
 
+To see the final analysis, please look at FINAL.pdf.
