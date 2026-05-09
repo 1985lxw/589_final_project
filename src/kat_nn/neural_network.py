@@ -16,6 +16,10 @@ def sigmoid(z):
     """Sigmoid activation for binary classification."""
     return 1 / (1 + np.exp(-z))
 
+def softmax(Z):
+    expZ = np.exp(Z - np.max(Z, axis=0, keepdims=True))
+    return expZ / np.sum(expZ, axis=0, keepdims=True)
+
 def add_bias(A):
     return np.vstack([np.ones((1, A.shape[1])), A])
 
@@ -47,7 +51,8 @@ def forwardprop(X, Thetas, activation):
         outs.append(Z)
 
         # 2. a^(l=k) = g(z^(l=k))
-        A = activation(Z)
+        # use sigmoif for hidden layers
+        A = sigmoid(Z)
 
         # 3. Adds bias term to a^(l=k)
         A = add_bias(A)
@@ -99,90 +104,40 @@ def backprop(X, Y, Thetas, activation, alpha=1.0, lambda_reg=0.0, verbose=False)
     """Returns the gradients for all layers using full-batch backpropagation."""
     n = X.shape[0]
     L = len(Thetas)
-    grads_sum = [np.zeros_like(theta) for theta in Thetas]
-    
-    if verbose:
-        for i in range(n):
-            x = X[i:i+1]
-            y = Y[i:i+1].T
-
-            # 1.1 Propagate x^(i) and compute each of the network's outputs, f_theta(x^(i))
-            activations, outs = forwardprop(x, Thetas, activation)
-
-            # 1.2 Compute the delta values of all output neurons
-            delta = [None] * L
-            delta[-1] = activations[-1] - y
-
-            print(f"\tComputing gradients based on training instance {i+1}")
-            print(f"\t\tdelta{L+1}: {fmt(delta[-1].ravel())}")
-
-            # 1.3 FOr each network layer, compute the delta values of all neurons in the hidden layers
-            for l in range(L - 2, -1, -1):
-                A = activations[l + 1][1:, :]
-                delta[l] = (Thetas[l + 1][:, 1:].T @ delta[l + 1]) * (A * (1 - A))
-                print(f"\t\tdelta{l+2}: {fmt(delta[l].ravel())}")
-
-            inst_grads = []
-            for l in range(L):
-                # 1.4 For each network layer, updates gradients of the weights of each layer, based on the current training instance
-                inst_grad = delta[l] @ activations[l].T
-                inst_grads.append(inst_grad)
-                grads_sum[l] += inst_grad
-
-            for l in range(L - 1, -1, -1):
-                print(f"\n\t\tGradients of Theta{l+1} based on training instance {i+1}:")
-                print("\t\t" + fmt_matrix(inst_grads[l]).replace("\n", "\n\t\t"))
-
-        D = []
-        print("\n\tThe entire training set has been processed. Computing the average (regularized) gradients:")
-
-        for l in range(L):
-            # 2 For each netowrk layer, compute the final (regularized) gradients of the weights of each layer
-            P = np.zeros_like(Thetas[l])
-            P[:, 1:] = lambda_reg * Thetas[l][:, 1:]
-            grad = (grads_sum[l] + P) / n
-            D.append(grad)
-
-            print(f"\t\tFinal regularized gradients of Theta{l+1}:")
-            print("\t\t\t" + fmt_matrix(grad).replace("\n", "\n\t\t\t"))
-
-        return [theta - alpha * grad for theta, grad in zip(Thetas, D)]
-    else:
-        n = X.shape[0]
-        L = len(Thetas)
+    if Y.ndim == 1:
         Y = Y.reshape(1, -1)
 
-        # 1.1 Propagate x^(i) and compute each of the network's outputs, f_theta(x^(i))
-        activations, outs = forwardprop(X, Thetas, activation)
+    # 1.1 Propagate x^(i) and compute each of the network's outputs, f_theta(x^(i))
+    activations, outs = forwardprop(X, Thetas, activation)
 
-        # 1.2 Compute the delta values of all output neurons
-        delta = [None] * L
-        delta[-1] = activations[-1] - Y
+    # 1.2 Compute the delta values of all output neurons
+    delta = [None] * L
+    delta[-1] = activations[-1] - Y
 
-        # 1.3 FOr each network layer, compute the delta values of all neurons in the hidden layers
-        for l in range(L - 2, -1, -1):
-            A = activations[l+1][1:, :]
-            delta[l] = (Thetas[l + 1][:, 1:].T @ delta[l + 1]) * (A * (1 - A))
-                    
+    # 1.3 FOr each network layer, compute the delta values of all neurons in the hidden layers
+    for l in range(L - 2, -1, -1):
+        A = activations[l+1][1:, :]
+        delta[l] = (Thetas[l + 1][:, 1:].T @ delta[l + 1]) * (A * (1 - A))
+                
 
-        D = []
-        for l in range(L):
-            # 1.4 For each network layer, updates gradients of the weights of each layer, based on the current training instance
-            grad = (delta[l] @ activations[l].T)
+    D = []
+    for l in range(L):
+        # 1.4 For each network layer, updates gradients of the weights of each layer, based on the current training instance
+        grad = (delta[l] @ activations[l].T)
 
-            # 2 For each netowrk layer, compute the final (regularized) gradients of the weights of each layer
-            P = np.zeros_like(Thetas[l])
-            P[:, 1:] = lambda_reg * Thetas[l][:, 1:]
-            grad = (1/n) * (grad + P)
+        # 2 For each netowrk layer, compute the final (regularized) gradients of the weights of each layer
+        P = np.zeros_like(Thetas[l])
+        P[:, 1:] = lambda_reg * Thetas[l][:, 1:]
+        grad = (1/n) * (grad + P)
 
-            D.append(grad)
+        D.append(grad)
 
-        updated_thetas = []
+    updated_thetas = []
 
-        for theta, grad in zip(Thetas, D):
-            updated_thetas.append(theta - alpha * grad)
+    for theta, grad in zip(Thetas, D):
+        updated_thetas.append(theta - alpha * grad)
 
-        return updated_thetas
+    return updated_thetas
 
 def make_mini_batches(X, Y, batch_size):
     """Returns mini batches."""
@@ -190,62 +145,32 @@ def make_mini_batches(X, Y, batch_size):
     indices = np.arange(n)
     np.random.shuffle(indices)
     X = X[indices]
-    Y = Y[indices]
+    if Y.ndim == 1:
+        Y = Y[indices]
+    else:
+        Y = Y[:, indices]
 
     batches = []
     for start in range(0, n, batch_size):
         end = min(start + batch_size, n)
-        batches.append((X[start:end], Y[start:end]))
+        Xb = X[start:end]
+
+        if Y.ndim == 1:
+            Yb = Y[start:end]
+        elif Y.shape[1] == n:
+            Yb = Y[:, start:end]
+        else:
+            Yb = Y[start:end]
+
+        batches.append((Xb, Yb))
+
     return batches
 
-def nn(X, Y, layer_sizes, activation, alpha=1.0, lambda_reg=0.0, num_epochs=1000, batch_size=None, verbose=False):
+def nn(X, Y, layer_sizes, activation, cost_fn, alpha=1.0, lambda_reg=0.0, num_epochs=1000, batch_size=None, stop_epsilon=1e-4, verbose=False):
     """Returns the result of training a neural network."""
     Thetas = initialize_parameters(layer_sizes)
     costs = []
-
-    if verbose:
-        print(f"Regularization parameter lambda={lambda_reg:.3f}")
-        print(f"\nInitializing the network with the following structure (number of neurons per layer): {layer_sizes}")
-       
-        # hard coding for testing ex1
-        if layer_sizes == [1, 2, 1]:
-            Thetas = [
-                np.array([[0.4, 0.1],
-                        [0.3, 0.2]]),
-                np.array([[0.7, 0.5, 0.6]])
-            ]
-        
-        # hard coding for testing ex2
-        if layer_sizes == [2, 4, 3, 2]:
-            theta1 = np.array([
-                [0.42, 0.15, 0.40],
-                [0.72, 0.10, 0.54],
-                [0.01, 0.19, 0.42],
-                [0.30, 0.35, 0.68]
-            ])
-            
-            theta2 = np.array([
-                [0.21, 0.67, 0.14, 0.96, 0.87],
-                [0.87, 0.42, 0.20, 0.32, 0.89],
-                [0.03, 0.56, 0.80, 0.69, 0.09]
-            ])
-            
-            theta3 = np.array([
-                [0.04, 0.87, 0.42, 0.53],
-                [0.17, 0.10, 0.95, 0.69]
-            ])
-
-            Thetas = [theta1, theta2, theta3]
-
-        for i, T in enumerate(Thetas):
-            print(f"\nInitial Theta{i+1} (the weights of each neuron, including the bias weight, are stored in the rows):")
-            print(fmt_matrix(T))
-
-        print("\nTraining set")
-        for i in range(X.shape[0]):
-            print(f"\tTraining instance {i+1}")
-            print(f"\t\tx: {fmt(X[i].ravel())}")
-            print(f"\t\ty: {fmt(np.asarray(Y[i]).ravel())}")
+    best_cost = np.inf
 
     for epoch in range(num_epochs):
         if batch_size is None:
@@ -253,48 +178,23 @@ def nn(X, Y, layer_sizes, activation, alpha=1.0, lambda_reg=0.0, num_epochs=1000
         else:
             batches = make_mini_batches(X, Y, batch_size=batch_size)
 
-        epoch_cost = 0.0
-        total_seen = 0
-
         for Xb, Yb in batches:
-            if verbose:
-                print("\n--------------------------------------------")
-                print("Computing the error/cost, J, of the network")
-
-            for i in range(Xb.shape[0]):
-                if verbose:
-                    x = Xb[i:i+1]
-                    y = Yb[i:i+1].T
-                    print(f"\tProcessing training instance {i+1}")
-                    print(f"\tForward propagating the input {fmt(x.ravel())}")
-
-                    activations, outs = forwardprop(x, Thetas, activation)
-
-                    print(f"\t\ta1: {fmt(activations[0].ravel())}")
-                    for l in range(len(outs)):
-                        print(f"\n\t\tz{l+2}: {fmt(outs[l].ravel())}")
-                        print(f"\t\ta{l+2}: {fmt(activations[l+1].ravel())}")
-
-                    AL = activations[-1]
-                    print(f"\n\t\tf(x): {fmt(AL.ravel())}")
-                    print(f"\tPredicted output for instance {i+1}: {fmt(AL.ravel())}")
-                    print(f"\tExpected output for instance {i+1}: {fmt(np.array([y]))}")
-                    J_inst = (-y * np.log(AL) - (1 - y) * np.log(1 - AL))
-                    print(f"\tCost, J, associated with instance {i+1}: {np.sum(J_inst):.3f}\n")
-
             Ab, _ = forwardprop(Xb, Thetas, activation)
-
-            if verbose:
-                full_J = cost(Yb, Ab[-1], Thetas, lambda_reg)
-                print(f"Final (regularized) cost, J, based on the complete training set: {full_J:.5f}")
-
+            if Yb.ndim == 1: 
+                Y_cost = Yb.reshape(1, -1) 
+            else: 
+                Y_cost = Yb            
+            current_cost = cost_fn(Y_cost, Ab[-1], Thetas, lambda_reg)
+            costs.append(current_cost)
             Thetas = backprop(Xb, Yb, Thetas, activation, alpha, lambda_reg, verbose)
 
-            batch_cost = cost(Yb, Ab[-1], Thetas, lambda_reg)
-            epoch_cost += batch_cost * Xb.shape[0]
-            total_seen += Xb.shape[0]
+            if best_cost is not None:
+                improvement = np.absolute(best_cost - current_cost)
+                if improvement < stop_epsilon:
+                    if verbose:
+                        print(f"Stopping early at epoch {epoch + 1}: improvement {improvement:.6e} < {stop_epsilon}")
+                    break
 
-        epoch_cost /= total_seen
-        costs.append(epoch_cost)
+            best_cost = min(best_cost, current_cost)
 
-    return Thetas, costs
+    return Thetas, current_cost
