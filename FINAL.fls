@@ -74,6 +74,8 @@ INPUT c:/texlive/2025/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/listings/listings.cfg
 INPUT c:/texlive/2025/texmf-dist/tex/latex/listings/listings.cfg
 INPUT c:/texlive/2025/texmf-dist/tex/latex/listings/listings.cfg
+INPUT c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/mathtools/mathtools.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/mathtools/mathtools.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/tools/calc.sty

@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1778288233.60565 "c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex" "FINAL.pdf" "FINAL" 1778288238.32297 0
-  "FINAL.aux" 1778288237 4147 f121f7b32e450f6c2c131cea62ed0f6e "pdflatex"
-  "FINAL.out" 1778288237 2692 75554d09ca1f382500e86f9ead8be44f "pdflatex"
-  "FINAL.tex" 1778288137 23251 756aee18a2f2eebf2ee243c168c91702 ""
-  "c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex" 1778288137 23251 756aee18a2f2eebf2ee243c168c91702 ""
+["pdflatex"] 1778289811.18638 "c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex" "FINAL.pdf" "FINAL" 1778289813.86708 0
+  "FINAL.aux" 1778289813 4191 095bf8ee70de5daf6e03b6461fce8751 "pdflatex"
+  "FINAL.out" 1778289813 2692 75554d09ca1f382500e86f9ead8be44f "pdflatex"
+  "FINAL.tex" 1778289807 22849 e17dd17952201ee735c379b1ba492433 ""
+  "c:/Users/Admin/Documents/GitHub/589_final_project/FINAL.tex" 1778289807 22849 e17dd17952201ee735c379b1ba492433 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1771358355 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1771357163 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1771359225 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -138,6 +138,7 @@
   "c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1771358700 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "c:/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1771358819 46885 8953c67ffba03252c6090aa19568b8ba ""
   "c:/texlive/2025/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty" 1771358995 43717 653cd083c203051741d10c7e48c3b24f ""
+  "c:/texlive/2025/texmf-dist/tex/latex/float/float.sty" 1771359159 6749 16d2656a1984957e674b149555f1ea1d ""
   "c:/texlive/2025/texmf-dist/tex/latex/fvextra/fvextra.sty" 1771359373 130233 043c4b0b54538f98c721738f5a963eef ""
   "c:/texlive/2025/texmf-dist/tex/latex/gensymb/gensymb.sty" 1771362301 4629 bbc3d88bc1fe1146ecbefa95c41cab26 ""
   "c:/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty" 1771362317 41601 9cf6c5257b1bc7af01a58859749dd37a ""

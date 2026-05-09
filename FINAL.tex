@@ -21,7 +21,7 @@
     breaklines=true,
     columns=flexible
 }
-
+\usepackage{float}
 \usepackage{mathtools}
 \usepackage{mathrsfs}
 \usepackage{rotating}
@@ -199,12 +199,10 @@ k & Accuracy & F1 Score \\
 49	& 0.957714	& 0.960383 \\
 51	& 0.955429	& 0.958529 \\
 \end{tabular}
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \begin{minipage}{0.65\textwidth}
-        \includegraphics[width=\linewidth]{knn_figures/digits_knn.png}
-        \caption{Handwritten Digits Accuracy Distribution}
-    \end{minipage}
+    \includegraphics[width=\linewidth]{knn_figures/digits_knn.png}
+    \caption{Handwritten Digits Accuracy Distribution}
 \end{figure}
 
 
@@ -224,12 +222,10 @@ Recall & 0.980000 & 0.934332 & 0.985000 & 1.0 & 0.993333 & 0.994118 & 1.0 \\
 F1 Score & 0.962738 & 0.965294 & 0.992204 & 1.0 & 0.996552 & 0.996970 & 1.0
 \end{tabular}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \begin{minipage}{0.65\textwidth}
-        \includegraphics[width=\linewidth]{rf_figures/Digits_all.png}
-        \caption{Digits Accuracy and F1 Score Distribution}
-    \end{minipage}
+    \includegraphics[width=\linewidth]{rf_figures/Digits_all.png}
+    \caption{Digits Accuracy and F1 Score Distribution}
 \end{figure}
 
 Technically the highest accuracy and f1 occurs at ntree=20 and ntree=50 because the accuracy and f1 are both 1 with those values, but it is likely that the model is overfit. Becuase of this, it may be better to use a value of ntree=5 even though the performance is technically a little lower at an accuracy of 0.969386 and an f1 score of 0.965294.
@@ -280,12 +276,10 @@ k & Accuracy & F1 Score \\
 51	& 0.816667	& 0.895134 \\
 \end{tabular}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \begin{minipage}{0.65\textwidth}
-        \includegraphics[width=\linewidth]{knn_figures/parkinsons_knn.png}
-        \caption{Handwritten Digits Accuracy Distribution}
-    \end{minipage}
+    \includegraphics[width=\linewidth]{knn_figures/parkinsons_knn.png}
+    \caption{Handwritten Digits Accuracy Distribution}
 \end{figure}
 \noindent\rule{\textwidth}{0.5pt}
 
@@ -300,12 +294,10 @@ Precision & 0.836293 & 0.843709	& 0.853481 & 0.853754 & 0.861730 & 0.854793	& 0.
 Recall & 0.935714 & 0.907143 & 0.928571	& 0.950000	& 0.964286	& 0.957143 & 0.950000 \\
 F1 Score & 0.881610	& 0.872319	& 0.887543 & 0.898543 & 0.909364 & 0.902490	& 0.908122
 \end{tabular}
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \begin{minipage}{0.65\textwidth}
-        \includegraphics[width=\linewidth]{rf_figures/Parkinsons_all.png}
-        \caption{Parkinsons Accuracy and F1 Score Distribution}
-    \end{minipage}
+    \includegraphics[width=\linewidth]{rf_figures/Parkinsons_all.png}
+    \caption{Parkinsons Accuracy and F1 Score Distribution}
 \end{figure}
 
 \newpage
@@ -355,12 +347,10 @@ k & Accuracy & F1 Score \\
 51 & 0.928084 & 0.915623 
 \end{tabular}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \begin{minipage}{0.65\textwidth}
-        \includegraphics[width=\linewidth]{knn_figures/rice_knn.png}
-        \caption{Rice Accuracy and F1 Score Distribution}
-    \end{minipage}
+    \includegraphics[width=\linewidth]{knn_figures/rice_knn.png}
+    \caption{Rice Accuracy and F1 Score Distribution}
 \end{figure}
 
 \noindent\rule{\textwidth}{0.5pt}
@@ -414,7 +404,7 @@ F1 Score:  0.9215
 
 \end{verbatim}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     
     \begin{minipage}{0.48\textwidth}
@@ -495,12 +485,10 @@ k & Accuracy & F1 Score \\
 51 & 0.856250 & 0.849728 \\
 \end{tabular}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \begin{minipage}{0.65\textwidth}
-        \includegraphics[width=\linewidth]{knn_figures/credit_knn.png}
-        \caption{Credit Approval Accuracy and F1 Score Distribution}
-    \end{minipage}
+    \includegraphics[width=\linewidth]{knn_figures/credit_knn.png}
+    \caption{Credit Approval Accuracy and F1 Score Distribution}
 \end{figure}
 
 \noindent\rule{\textwidth}{0.5pt}
@@ -552,7 +540,7 @@ F1 Score:  0.8654
 
 \end{verbatim}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \begin{minipage}{0.48\textwidth}
         \centering
