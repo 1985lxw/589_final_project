@@ -349,10 +349,14 @@ k & Accuracy & F1 Score \\
 \end{figure}
 
 
+<<<<<<< HEAD
 As k increases, the general trend for the performance is that it decreases. This is expected, as too large k values can lead to too generalized performance. Although, the overall performance is still generally high with the lowest accuracy and F1 score being around 0.96. The best configuration for this model based on this graph is at $k=1$. 
 
 \noindent\rule{\textwidth}{0.5pt}
 
+=======
+As k increases, the general trend for the performance is that it decreases. This is expected, as too large k values can lead to too generalized performance. Although, the overall performance is still generally high with the lowest accuracy and F1 score being around 0.96. The best configuration for this model based on this graph is at $k=1$. We chose KNN for this dataset because the same numbers would be in similar places in 64-dimensional space, so we thought this algorithm would perform well (which it did!). 
+>>>>>>> tiffany
 \subsection{Random Forest}
 
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
@@ -371,8 +375,12 @@ F1 Score & 0.962738 & 0.965294 & 0.992204 & 1.0 & 0.996552 & 0.996970 & 1.0
     \caption{Digits Accuracy and F1 Score Distribution}
 \end{figure}
 
+<<<<<<< HEAD
 Technically the highest accuracy and f1 occurs at ntree=20 and ntree=50 because the accuracy and f1 are both 1 with those values, but it is likely that the model is overfit. Becuase of this, it may be better to use a value of ntree=5 even though the performance is technically a little lower at an accuracy of 0.969386 and an f1 score of 0.965294.
 
+=======
+Technically the highest accuracy and f1 occurs at ntree=20 and ntree=50 because the accuracy and f1 are both 1 with those values, but it is likely that the model is overfit. Becuase of this, it may be better to use a value of ntree=5 even though the performance is technically a little lower at an accuracy of 0.969386 and an f1 score of 0.965294. We chose random forest for digits because this dataset has a lot of attributes (64) so in order for a decision tree to perform as well, it would have to be very complex. In contrast, with a random forest each tree can be less complex and still perform well. 
+>>>>>>> tiffany
 \newpage 
 
 
@@ -496,6 +504,7 @@ k & Accuracy & F1 Score \\
 51	& 0.816667	& 0.895134 \\
 \end{tabular}
 
+<<<<<<< HEAD
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{knn_figures/parkinsons_knn.png}
@@ -503,6 +512,16 @@ k & Accuracy & F1 Score \\
 \end{figure}
 \noindent\rule{\textwidth}{0.5pt}
 
+=======
+\begin{figure}[htbp]
+    \begin{minipage}{0.65\textwidth}
+        \includegraphics[width=\linewidth]{knn_figures/parkinsons_knn.png}
+        \caption{Parkinsons Accuracy Distribution}
+    \end{minipage}
+\end{figure}
+\noindent\rule{\textwidth}{0.5pt}
+Again like the digits dataset, as k increases, the general performance decreases. However, the difference between the highest and the lowest performing k value is much larger this time. The best configuration for this model based on this graph is at $k=1$. We chose KNN for this dataset because the algorithm performs well on both numerical data, and also this dataset is not that large so it would perform relatively fast. 
+>>>>>>> tiffany
 
 \subsection{Random Forest}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
@@ -520,11 +539,9 @@ F1 Score & 0.881610	& 0.872319	& 0.887543 & 0.898543 & 0.909364 & 0.902490	& 0.9
     \caption{Parkinson's Accuracy and F1 Score Distribution}
 \end{figure}
 
+The best accuracy happens at ntree=30,50 at 85\%. As ntree increases, the accuracy and F1 score generally increases with only a small dip by 2\% at around 40 trees. We chose random forest because the dataset is very small: we didn't want a decision tree to overfit on the data, as the tend to do.
+
 \newpage
-
-
-
-
 \section{\underline{The Rice Grain Dataset}}
 \subsection{Neural Networks Algorithm}
 
@@ -715,6 +732,8 @@ k & Accuracy & F1 Score \\
 \end{figure}
 
 \noindent\rule{\textwidth}{0.5pt}
+
+After k=1, the performance gradually increases until it hits a plateau at around 92\%. I would say the best configuration is at k=7 since it achieves basically the same performance as the higher k values but with a much smaller k value and therefore much faster runtime. We chose KNN for this dataset because there are only a few numerical attributes, which may aid total runtime, and KNN performs well for numerical data. 
 
 \subsection{Decision Trees Algorithm}
 We chose to test decision trees on the rice dataset 
@@ -991,8 +1010,7 @@ k & Accuracy & F1 Score \\
     \includegraphics[width=\linewidth]{knn_figures/credit_knn.png}
     \caption{Credit Approval Accuracy and F1 Score Distribution}
 \end{figure}
-
-\noindent\rule{\textwidth}{0.5pt}
+Similar to the rice data set, the performance increases after k=1 (though more sharply for this dataset) and begins a relative plateau in performance. However, there are slightly more fluctuations in this plateau with an average fluctuation of about $\pm 1\%$. The best performance is at $k=7$ at 87\% accuracy and 86\% F1 score. We chose KNN for this dataset because it is robust on categorical and numerical data, and it is a relatively small dataset meaning that it will run relatively fast for KNN.  
 
 \subsection{Decision Trees Algorithm}
 We chose to test decision trees on the credit approval dataset because 
