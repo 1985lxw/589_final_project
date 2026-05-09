@@ -200,12 +200,13 @@ k & Accuracy & F1 Score \\
 51	& 0.955429	& 0.958529 \\
 \end{tabular}
 \begin{figure}[htbp]
+    \centering
     \begin{minipage}{0.65\textwidth}
         \includegraphics[width=\linewidth]{knn_figures/digits_knn.png}
         \caption{Handwritten Digits Accuracy Distribution}
     \end{minipage}
 \end{figure}
-\noindent\rule{\textwidth}{0.5pt}
+
 
 As k increases, the general trend for the performance is that it decreases. This is expected, as too large k values can lead to too generalized performance. Although, the overall performance is still generally high with the lowest accuracy and F1 score being around 0.96. The best configuration for this model based on this graph is at $k=1$. We chose KNN for this dataset because the same numbers would be in similar places in 64-dimensional space, so we thought this algorithm would perform well (which it did!). 
 \subsection{Random Forest}
@@ -221,6 +222,7 @@ F1 Score & 0.962738 & 0.965294 & 0.992204 & 1.0 & 0.996552 & 0.996970 & 1.0
 \end{tabular}
 
 \begin{figure}[htbp]
+    \centering
     \begin{minipage}{0.65\textwidth}
         \includegraphics[width=\linewidth]{rf_figures/Digits_all.png}
         \caption{Digits Accuracy and F1 Score Distribution}
@@ -229,14 +231,6 @@ F1 Score & 0.962738 & 0.965294 & 0.992204 & 1.0 & 0.996552 & 0.996970 & 1.0
 
 Technically the highest accuracy and f1 occurs at ntree=20 and ntree=50 because the accuracy and f1 are both 1 with those values, but it is likely that the model is overfit. Becuase of this, it may be better to use a value of ntree=5 even though the performance is technically a little lower at an accuracy of 0.969386 and an f1 score of 0.965294. We chose random forest for digits because this dataset has a lot of attributes (64) so in order for a decision tree to perform as well, it would have to be very complex. In contrast, with a random forest each tree can be less complex and still perform well. 
 \newpage 
-
-
-
-
-\section{\underline{The Oxford Parkinson's Disease Detection Dataset}}
-
-\subsection{Neural Networks Algorithm}
-
 TODO
 
 \noindent\rule{\textwidth}{0.5pt}
@@ -277,6 +271,7 @@ k & Accuracy & F1 Score \\
 \end{tabular}
 
 \begin{figure}[htbp]
+    \centering
     \begin{minipage}{0.65\textwidth}
         \includegraphics[width=\linewidth]{knn_figures/parkinsons_knn.png}
         \caption{Parkinsons Accuracy Distribution}
@@ -296,6 +291,7 @@ Recall & 0.935714 & 0.907143 & 0.928571	& 0.950000	& 0.964286	& 0.957143 & 0.950
 F1 Score & 0.881610	& 0.872319	& 0.887543 & 0.898543 & 0.909364 & 0.902490	& 0.908122
 \end{tabular}
 \begin{figure}[htbp]
+    \centering
     \begin{minipage}{0.65\textwidth}
         \includegraphics[width=\linewidth]{rf_figures/Parkinsons_all.png}
         \caption{Parkinsons Accuracy and F1 Score Distribution}
@@ -348,6 +344,7 @@ k & Accuracy & F1 Score \\
 \end{tabular}
 
 \begin{figure}[htbp]
+    \centering
     \begin{minipage}{0.65\textwidth}
         \includegraphics[width=\linewidth]{knn_figures/rice_knn.png}
         \caption{Rice Accuracy and F1 Score Distribution}
@@ -405,13 +402,6 @@ Min Split: 762
 F1 Score:  0.9215
 ==============================
 
-
-
-Final Results:
-Training Accuracy: 0.9239
-Training F1 Score: 0.9216
-Testing Accuracy: 0.9239
-Testing F1 Score: 0.9215
 \end{verbatim}
 
 \begin{figure}[htbp]
@@ -428,6 +418,14 @@ Testing F1 Score: 0.9215
         \caption{Rice F1 Score Distribution}
     \end{minipage}
 \end{figure}
+
+\begin{verbatim}
+Final Results:
+Training Accuracy: 0.9239
+Training F1 Score: 0.9216
+Testing Accuracy: 0.9239
+Testing F1 Score: 0.9215
+\end{verbatim}
 
 For both models, the training scores are highly concentrated around 0.92, 
 while the testing scores are more spread out, with a mean around 0.923 for 
@@ -488,6 +486,7 @@ k & Accuracy & F1 Score \\
 \end{tabular}
 
 \begin{figure}[htbp]
+    \centering
     \begin{minipage}{0.65\textwidth}
         \includegraphics[width=\linewidth]{knn_figures/credit_knn.png}
         \caption{Credit Approval Accuracy and F1 Score Distribution}
@@ -540,12 +539,6 @@ Min Split: 97
 F1 Score:  0.8654
 ==============================
 
-
-Final Results:
-Training Accuracy: 0.8746
-Training F1 Score: 0.8741
-Testing Accuracy: 0.8606
-Testing F1 Score: 0.8601
 \end{verbatim}
 
 \begin{figure}[htbp]
@@ -561,6 +554,14 @@ Testing F1 Score: 0.8601
         \caption{Credit Approval F1 Score Distribution}
     \end{minipage}
 \end{figure}
+
+\begin{verbatim}
+Final Results:
+Training Accuracy: 0.8746
+Training F1 Score: 0.8741
+Testing Accuracy: 0.8606
+Testing F1 Score: 0.8601
+\end{verbatim}
 
 The test scores are widley spread which suggests the model is sensitive to the specific training data 
 used in each fold, leading to a poor local optimum. Especially in smaller datasets, the presence/absence
@@ -579,8 +580,9 @@ unique values in a categorical feature, it can lead to a large number of splits 
                     & \multicolumn{2}{c|}{Handwritten Digits}  & \multicolumn{2}{c|}{Parkinson's}         & \multicolumn{2}{c|}{Rice Grains}         & \multicolumn{2}{c|}{Credit Approval}     \\ \hline
                     & \multicolumn{1}{c|}{Accuracy} & F1-Score & \multicolumn{1}{c|}{Accuracy} & F1-Score & \multicolumn{1}{c|}{Accuracy} & F1-Score & \multicolumn{1}{c|}{Accuracy} & F1-Score \\ \hline
 Neural Networks     & \multicolumn{1}{c|}{}         &          & \multicolumn{1}{c|}{}         &          & \multicolumn{1}{c|}{}         &          & \multicolumn{1}{c|}{}         &          \\ \hline
-K-Nearest Neighbors & \multicolumn{1}{c|}{0.97109}         & 0.97281          & \multicolumn{1}{c|}{0.866239}     &   0.92118       & \multicolumn{1}{c|}{0.9237}         &  0.91048        & \multicolumn{1}{c|}{0.86009}  & 0.85289    \\ \hline
-Decision Trees/Random Forest & \multicolumn{1}{c|}{0.989267}   & {0.98767}   & \multicolumn{1}{c|}{0.82698} & 0.75305   & \multicolumn{1}{c|}{0.9239}   & 0.9215   & \multicolumn{1}{c|}{0.8606}   & 0.8601   \\ \hline
+K-Nearest Neighbors & \multicolumn{1}{c|}{0.97109}    & 0.97281     & \multicolumn{1}{c|}{0.866239}     &   0.92118       & \multicolumn{1}{c|}{0.9237}         &  0.91048        & \multicolumn{1}{c|}{0.86009}  & 0.85289    \\ \hline
+Decision Trees      & \multicolumn{1}{c|}{}           &             & \multicolumn{1}{c|}{} &    & \multicolumn{1}{c|}{0.9239}   & 0.9215   & \multicolumn{1}{c|}{0.8606}   & 0.8601   \\ \hline
+Random Forest       & \multicolumn{1}{c|}{0.989267}   & {0.98767}   & \multicolumn{1}{c|}{0.82698} & 0.75305   & \multicolumn{1}{c|}{}   &   & \multicolumn{1}{c|}{}   &   \\ \hline
 \end{tabular}
 \end{table}
 
