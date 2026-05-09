@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.28)  8 MAY 2026 22:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.28)  8 MAY 2026 22:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1107,7 +1107,7 @@ Overfull \hbox (30.32019pt too wide) in alignment at lines 188--302
  []
 
 [2] [3]
-<figures/digits_learning_curve.jpg, id=135, 505.89pt x 289.08pt>
+<figures/digits_learning_curve.jpg, id=139, 505.89pt x 289.08pt>
 File: figures/digits_learning_curve.jpg Graphic file (type jpg)
 <use figures/digits_learning_curve.jpg>
 Package pdftex.def Info: figures/digits_learning_curve.jpg  used on input line 308.
@@ -1117,7 +1117,7 @@ Overfull \hbox (15.0pt too wide) in paragraph at lines 307--310
 []$[]$ 
  []
 
-<knn_figures/digits_knn.png, id=136, 570.2103pt x 286.1892pt>
+<knn_figures/digits_knn.png, id=140, 570.2103pt x 286.1892pt>
 File: knn_figures/digits_knn.png Graphic file (type png)
 <use knn_figures/digits_knn.png>
 Package pdftex.def Info: knn_figures/digits_knn.png  used on input line 348.
@@ -1127,7 +1127,7 @@ Package pdftex.def Info: knn_figures/digits_knn.png  used on input line 348.
 [4 <./figures/digits_learning_curve.jpg>]
 
 [5 <./knn_figures/digits_knn.png>]
-<rf_figures/Digits_all.png, id=148, 462.528pt x 346.896pt>
+<rf_figures/Digits_all.png, id=152, 462.528pt x 346.896pt>
 File: rf_figures/Digits_all.png Graphic file (type png)
 <use rf_figures/Digits_all.png>
 Package pdftex.def Info: rf_figures/Digits_all.png  used on input line 368.
@@ -1159,12 +1159,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 378.
 
-<figures/park_acc_dt.png, id=155, 409.7709pt x 328.8285pt>
+<figures/park_acc_dt.png, id=159, 409.7709pt x 328.8285pt>
 File: figures/park_acc_dt.png Graphic file (type png)
 <use figures/park_acc_dt.png>
 Package pdftex.def Info: figures/park_acc_dt.png  used on input line 444.
 (pdftex.def)             Requested size: 234.76738pt x 188.39253pt.
-<figures/park_f1_dt.png, id=156, 416.2752pt x 328.8285pt>
+<figures/park_f1_dt.png, id=160, 416.2752pt x 328.8285pt>
 File: figures/park_f1_dt.png Graphic file (type png)
 <use figures/park_f1_dt.png>
 Package pdftex.def Info: figures/park_f1_dt.png  used on input line 449.
@@ -1172,7 +1172,7 @@ Package pdftex.def Info: figures/park_f1_dt.png  used on input line 449.
 
 
 [7]
-<knn_figures/parkinsons_knn.png, id=162, 570.2103pt x 286.1892pt>
+<knn_figures/parkinsons_knn.png, id=166, 570.2103pt x 286.1892pt>
 File: knn_figures/parkinsons_knn.png Graphic file (type png)
 <use knn_figures/parkinsons_knn.png>
 Package pdftex.def Info: knn_figures/parkinsons_knn.png  used on input line 502.
@@ -1180,7 +1180,7 @@ Package pdftex.def Info: knn_figures/parkinsons_knn.png  used on input line 502.
 
 
 [8 <./figures/park_acc_dt.png> <./figures/park_f1_dt.png>]
-<rf_figures/Parkinsons_all.png, id=170, 462.528pt x 346.896pt>
+<rf_figures/Parkinsons_all.png, id=174, 462.528pt x 346.896pt>
 File: rf_figures/Parkinsons_all.png Graphic file (type png)
 <use rf_figures/Parkinsons_all.png>
 Package pdftex.def Info: rf_figures/Parkinsons_all.png  used on input line 522.
@@ -1240,7 +1240,7 @@ Overfull \hbox (20.32016pt too wide) in alignment at lines 551--665
  []
 
 [11] [12]
-<figures/rice_learning_curve.jpg, id=193, 505.89pt x 289.08pt>
+<figures/rice_learning_curve.jpg, id=197, 505.89pt x 289.08pt>
 File: figures/rice_learning_curve.jpg Graphic file (type jpg)
 <use figures/rice_learning_curve.jpg>
 Package pdftex.def Info: figures/rice_learning_curve.jpg  used on input line 671.
@@ -1250,7 +1250,7 @@ Overfull \hbox (15.0pt too wide) in paragraph at lines 670--673
 []$[]$ 
  []
 
-<knn_figures/rice_knn.png, id=194, 564.4287pt x 286.1892pt>
+<knn_figures/rice_knn.png, id=198, 564.4287pt x 286.1892pt>
 File: knn_figures/rice_knn.png Graphic file (type png)
 <use knn_figures/rice_knn.png>
 Package pdftex.def Info: knn_figures/rice_knn.png  used on input line 714.
@@ -1260,12 +1260,12 @@ Package pdftex.def Info: knn_figures/rice_knn.png  used on input line 714.
 [13 <./figures/rice_learning_curve.jpg>]
 
 [14 <./knn_figures/rice_knn.png>]
-<figures/rice_acc_dt.png, id=206, 411.2163pt x 328.8285pt>
+<figures/rice_acc_dt.png, id=210, 411.2163pt x 328.8285pt>
 File: figures/rice_acc_dt.png Graphic file (type png)
 <use figures/rice_acc_dt.png>
 Package pdftex.def Info: figures/rice_acc_dt.png  used on input line 780.
 (pdftex.def)             Requested size: 234.76738pt x 187.73524pt.
-<figures/rice_f1_dt.png, id=207, 409.7709pt x 328.8285pt>
+<figures/rice_f1_dt.png, id=211, 409.7709pt x 328.8285pt>
 File: figures/rice_f1_dt.png Graphic file (type png)
 <use figures/rice_f1_dt.png>
 Package pdftex.def Info: figures/rice_f1_dt.png  used on input line 785.
@@ -1325,12 +1325,12 @@ Overfull \hbox (25.32018pt too wide) in alignment at lines 847--961
  []
 
 [17] [18]
-<figures/credit_learning_curve.jpg, id=228, 505.89pt x 289.08pt>
+<figures/credit_learning_curve.jpg, id=232, 505.89pt x 289.08pt>
 File: figures/credit_learning_curve.jpg Graphic file (type jpg)
 <use figures/credit_learning_curve.jpg>
 Package pdftex.def Info: figures/credit_learning_curve.jpg  used on input line 966.
 (pdftex.def)             Requested size: 244.55153pt x 139.74487pt.
-<knn_figures/credit_knn.png, id=229, 564.4287pt x 286.1892pt>
+<knn_figures/credit_knn.png, id=233, 564.4287pt x 286.1892pt>
 File: knn_figures/credit_knn.png Graphic file (type png)
 <use knn_figures/credit_knn.png>
 Package pdftex.def Info: knn_figures/credit_knn.png  used on input line 1009.
@@ -1340,12 +1340,12 @@ Package pdftex.def Info: knn_figures/credit_knn.png  used on input line 1009.
 [19 <./figures/credit_learning_curve.jpg>]
 
 [20 <./knn_figures/credit_knn.png>]
-<figures/credit_acc_dt.png, id=242, 409.7709pt x 328.8285pt>
+<figures/credit_acc_dt.png, id=246, 409.7709pt x 328.8285pt>
 File: figures/credit_acc_dt.png Graphic file (type png)
 <use figures/credit_acc_dt.png>
 Package pdftex.def Info: figures/credit_acc_dt.png  used on input line 1069.
 (pdftex.def)             Requested size: 234.76738pt x 188.39253pt.
-<figures/credit_f1_dt.png, id=243, 409.7709pt x 328.8285pt>
+<figures/credit_f1_dt.png, id=247, 409.7709pt x 328.8285pt>
 File: figures/credit_f1_dt.png Graphic file (type png)
 <use figures/credit_f1_dt.png>
 Package pdftex.def Info: figures/credit_f1_dt.png  used on input line 1074.
@@ -1371,22 +1371,32 @@ Overfull \hbox (35.17543pt too wide) in paragraph at lines 1117--1126
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `FINAL.out' has not changed.
-(rerunfilecheck)             Checksum: 3A1225B40BDE63256F13E8022FE74AFB;2682.
+
+
+Package rerunfilecheck Warning: File `FINAL.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `FINAL.out':
+(rerunfilecheck)             Before: 52921034A5940AB0FFCAEC1B2FEC1DDE;2866
+(rerunfilecheck)             After:  3A1225B40BDE63256F13E8022FE74AFB;2682.
  ) 
 Here is how much of TeX's memory you used:
- 36388 strings out of 473201
- 709920 string characters out of 5720299
+ 36390 strings out of 473201
+ 709950 string characters out of 5720299
  1337520 words of memory out of 5000000
- 58865 multiletter control sequences out of 15000+600000
+ 58866 multiletter control sequences out of 15000+600000
  570462 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,9n,101p,1050b,629s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{subsection.2.4} has been referenced but does not exist, replaced by a fixed one
+
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on FINAL.pdf (23 pages, 536292 bytes).
+Output written on FINAL.pdf (23 pages, 536370 bytes).
 PDF statistics:
- 316 PDF objects out of 1000 (max. 8388607)
- 219 compressed objects within 3 object streams
- 54 named destinations out of 1000 (max. 500000)
- 31600 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 321 PDF objects out of 1000 (max. 8388607)
+ 224 compressed objects within 3 object streams
+ 55 named destinations out of 1000 (max. 500000)
+ 31608 words of extra memory for PDF output out of 35830 (max. 10000000)
 
