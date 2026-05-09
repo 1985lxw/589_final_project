@@ -1016,10 +1016,6 @@ We chose to test decision trees on the credit approval dataset because
 it has a moderate number of features (15) and a relatively small number of samples (653), 
 which allows us to test two different hyperparameters; tree depths and minimum split sizes.
 This is shown in the tuning results below where we tested 6 different tree depths and 
-4 different minimum split sizes.We chose to test decision trees on the credit approval dataset because 
-it has a moderate number of features (15) and a relatively small number of samples (653), 
-which allows us to test two different hyperparameters; tree depths and minimum split sizes.
-This is shown in the tuning results below where we tested 6 different tree depths and 
 4 different minimum split sizes.
 \begin{verbatim}
 Tuning for dataset with 653 rows and 15 features.
@@ -1094,24 +1090,6 @@ Since the credit approval dataset has some categorical features, they need to be
 unique values in a categorical feature, it can lead to a large number of splits in the decision tree, which may be why there is more spread in the test scores for this dataset.
 
 
-\begin{verbatim}
-Final Results:
-Training Accuracy: 0.8746
-Training F1 Score: 0.8741
-Testing Accuracy: 0.8606
-Testing F1 Score: 0.8601
-\end{verbatim}
-
-The test scores are widley spread which suggests the model is sensitive to the specific training data 
-used in each fold, leading to a poor local optimum. Especially in smaller datasets, the presence/absence
-of a few instances in a training fold can have a significant impact on the tree structure and thus the performance. 
-The training scores are more concentrated around 0.87, while some test folds outperform the training performance.
-This suggests that the model is stable during training, but is not consistent on generalizing depending on the test fold.
-The accuracy and F1 scores are also very close to each other which suggests that the model is performing well across all labels in the dataset and that the labels in the dataset are balanced. 
-Since the credit approval dataset has some categorical features, they need to be factorized. If there are a lot of
-unique values in a categorical feature, it can lead to a large number of splits in the decision tree, which may be why there is more spread in the test scores for this dataset.
-
-
 \newpage
 \begin{table}[]
 \begin{tabular}{|c|cc|cc|cc|cc|}
@@ -1120,7 +1098,7 @@ unique values in a categorical feature, it can lead to a large number of splits 
                     & \multicolumn{1}{c|}{Accuracy} & F1-Score & \multicolumn{1}{c|}{Accuracy} & F1-Score & \multicolumn{1}{c|}{Accuracy} & F1-Score & \multicolumn{1}{c|}{Accuracy} & F1-Score \\ \hline
 Neural Networks     & \multicolumn{1}{c|}{0.936010}         &     0.936004     & \multicolumn{1}{c|}{}         &          & \multicolumn{1}{c|}{\cellcolor{blue!25}0.928871}         &    \cellcolor{blue!25} 0.937713     & \multicolumn{1}{c|}{\cellcolor{blue!25}0.874360}         &    \cellcolor{blue!25} 0.864466      \\ \hline
 K-Nearest Neighbors & \multicolumn{1}{c|}{0.97109}    & 0.97281     & \multicolumn{1}{c|}{\cellcolor{blue!25}0.866239}     &   \cellcolor{blue!25} 0.92118       & \multicolumn{1}{c|}{0.9237}         &  0.91048        & \multicolumn{1}{c|}{0.86009}  & 0.85289    \\ \hline
-Decision Trees      & \multicolumn{1}{c|}{}           &             & \multicolumn{1}{c|}{} &    & \multicolumn{1}{c|}{0.9239}   & 0.9215   & \multicolumn{1}{c|}{0.8606}   & 0.8601   \\ \hline
+Decision Trees      & \multicolumn{1}{c|}{}           &             & \multicolumn{1}{c|}{0.88508} &  0.8101  & \multicolumn{1}{c|}{0.9239}   & 0.9215   & \multicolumn{1}{c|}{0.8606}   & 0.8601   \\ \hline
 Random Forest       & \multicolumn{1}{c|}{\cellcolor{blue!25}0.989267}   & \cellcolor{blue!25}{0.98767}   & \multicolumn{1}{c|}{0.82698} & 0.75305   & \multicolumn{1}{c|}{}   &   & \multicolumn{1}{c|}{}   &   \\ \hline
 \end{tabular}
 \end{table}
